@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <allowRecall>false</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+        <field>Owner</field>
+        <field>Type</field>
+        <field>Amount</field>
+        <field>CloseDate</field>
+        <field>Content_Domain__c</field>
+        <field>Main_Course_Type__c</field>
+        <field>Course_Type_Subcategory__c</field>
+        <field>Course_Language__c</field>
+        <field>NextStep</field>
+        <field>StageName</field>
+        <field>Targeted_Launch_Date__c</field>
+        <field>Content_Strategy_Reviewed__c</field>
+        <field>Content_Target_Made__c</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>true</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>Pre_Proposal_Approved</name>
+                <type>FieldUpdate</type>
+            </action>
+            <action>
+                <name>Update_Content_Strategy_Review_Field</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>mlei@coursera.org</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Content Strategy vertical manager should approve of the content market subject area (&quot;Weight Loss&quot;), course type (Course or S12n, etc) and subcategory (PBL/HD/etc).</description>
+        <label>Approval - 1 - Data</label>
+        <name>Approval_1_Data</name>
+        <rejectionActions>
+            <action>
+                <name>Update_Content_Strategy_Review_Field_R</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <description>This is the Approvals workflow from Partnerships to Content Strategy for pre-proposals in the Data content area.</description>
+    <emailTemplate>Internal_Approvals/AR_Internal_Approvals_Pre_Proposal</emailTemplate>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <entryCriteria>
+        <criteriaItems>
+            <field>Opportunity.Content_Domain__c</field>
+            <operation>equals</operation>
+            <value>Data/Data Science</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Course_Type_Subcategory__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Main_Course_Type__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Target Identified,Pitched/Qualifying,Interest/Development,Commitment,Pre-Proposal Submitted (Round 1)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.RecordType</field>
+            <operation>equals</operation>
+            <value>Partnerships Opportunity</value>
+        </criteriaItems>
+    </entryCriteria>
+    <finalApprovalRecordLock>false</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>Notes_around_Loss</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Reason_for_Loss</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Update_Stage_to_Lost</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>Submit_Pre_Proposal</name>
+            <type>FieldUpdate</type>
+        </action>
+    </initialSubmissionActions>
+    <label>Approvals for Partnership Opps: Data</label>
+    <recordEditability>AdminOrCurrentApprover</recordEditability>
+    <showApprovalHistory>true</showApprovalHistory>
+</ApprovalProcess>

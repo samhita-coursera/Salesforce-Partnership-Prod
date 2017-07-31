@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>iMBA</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>iMBA access for degrees users</description>
+        <label>iMBA</label>
+        <sharedTo>
+            <group>iMBA_Group</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Degrees</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Partner_Name__c</field>
+            <operation>contains</operation>
+            <value>University of Illinois at Urbana-Champaign</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Program_Name__c</field>
+            <operation>contains</operation>
+            <value>iMBA</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+</SharingRules>

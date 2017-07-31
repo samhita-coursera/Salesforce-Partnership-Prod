@@ -1,0 +1,2725 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ChangeStatus</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CloneAsChild</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CloseCase</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>MassClose</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>NewCase</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <businessProcesses>
+        <fullName>Business Operations</fullName>
+        <description>Case type for team process, internal reporting, and business workflow-related operations</description>
+        <isActive>true</isActive>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Escalated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>On Hold</fullName>
+            <default>false</default>
+        </values>
+    </businessProcesses>
+    <businessProcesses>
+        <fullName>Learner Operations</fullName>
+        <description>Case type for learner- and learner-related operations (will create a ticket in Zendesk)</description>
+        <isActive>true</isActive>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Escalated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>On Hold</fullName>
+            <default>false</default>
+        </values>
+    </businessProcesses>
+    <businessProcesses>
+        <fullName>Marketing Operations</fullName>
+        <description>Case type for collateral and external facing-related operations</description>
+        <isActive>true</isActive>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Escalated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>On Hold</fullName>
+            <default>false</default>
+        </values>
+    </businessProcesses>
+    <businessProcesses>
+        <fullName>Product Operations</fullName>
+        <description>Case type for product- and product-related operations (will create a ticket in JIRA)</description>
+        <isActive>true</isActive>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Escalated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>On Hold</fullName>
+            <default>false</default>
+        </values>
+    </businessProcesses>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <enableFeeds>true</enableFeeds>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>AccountId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>AssetId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>BusinessHoursId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ClosedDate</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>Comments</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>ContactEmail</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>ContactFax</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>ContactId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ContactMobile</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>ContactPhone</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>Description</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>IsClosedOnCreate</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>IsEscalated</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>Issue_Type__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Same issue type you&apos;d select if you were creating the JIRA ticket</inlineHelpText>
+        <label>Issue Type</label>
+        <picklist>
+            <controllingField>JIRA_Project_Assignment__c</controllingField>
+            <picklistValues>
+                <fullName>Bug</fullName>
+                <default>false</default>
+                <controllingFieldValues>Accomplishments</controllingFieldValues>
+                <controllingFieldValues>Analytics</controllingFieldValues>
+                <controllingFieldValues>Assessments</controllingFieldValues>
+                <controllingFieldValues>Business Analytics</controllingFieldValues>
+                <controllingFieldValues>Captioning and Translations</controllingFieldValues>
+                <controllingFieldValues>Content Experience and Teaching</controllingFieldValues>
+                <controllingFieldValues>Course Success</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>New Feature</fullName>
+                <default>false</default>
+                <controllingFieldValues>Accomplishments</controllingFieldValues>
+                <controllingFieldValues>Analytics</controllingFieldValues>
+                <controllingFieldValues>Assessments</controllingFieldValues>
+                <controllingFieldValues>Business Analytics</controllingFieldValues>
+                <controllingFieldValues>Captioning and Translations</controllingFieldValues>
+                <controllingFieldValues>Enhancement Requests</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Task</fullName>
+                <default>false</default>
+                <controllingFieldValues>Accomplishments</controllingFieldValues>
+                <controllingFieldValues>Analytics</controllingFieldValues>
+                <controllingFieldValues>Assessments</controllingFieldValues>
+                <controllingFieldValues>Business Analytics</controllingFieldValues>
+                <controllingFieldValues>Captioning and Translations</controllingFieldValues>
+                <controllingFieldValues>Content Experience and Teaching</controllingFieldValues>
+                <controllingFieldValues>Course Success</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Improvement</fullName>
+                <default>false</default>
+                <controllingFieldValues>Accomplishments</controllingFieldValues>
+                <controllingFieldValues>Analytics</controllingFieldValues>
+                <controllingFieldValues>Assessments</controllingFieldValues>
+                <controllingFieldValues>Business Analytics</controllingFieldValues>
+                <controllingFieldValues>Captioning and Translations</controllingFieldValues>
+                <controllingFieldValues>Content Experience and Teaching</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sub-task</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Epic</fullName>
+                <default>false</default>
+                <controllingFieldValues>Accomplishments</controllingFieldValues>
+                <controllingFieldValues>Analytics</controllingFieldValues>
+                <controllingFieldValues>Assessments</controllingFieldValues>
+                <controllingFieldValues>Business Analytics</controllingFieldValues>
+                <controllingFieldValues>Captioning and Translations</controllingFieldValues>
+                <controllingFieldValues>Course Success</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Story</fullName>
+                <default>false</default>
+                <controllingFieldValues>Accomplishments</controllingFieldValues>
+                <controllingFieldValues>Analytics</controllingFieldValues>
+                <controllingFieldValues>Assessments</controllingFieldValues>
+                <controllingFieldValues>Business Analytics</controllingFieldValues>
+                <controllingFieldValues>Captioning and Translations</controllingFieldValues>
+                <controllingFieldValues>Content Experience and Teaching</controllingFieldValues>
+                <controllingFieldValues>Course Success</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Technical task</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mobile story</fullName>
+                <default>false</default>
+                <controllingFieldValues>Accomplishments</controllingFieldValues>
+                <controllingFieldValues>Analytics</controllingFieldValues>
+                <controllingFieldValues>Assessments</controllingFieldValues>
+                <controllingFieldValues>Business Analytics</controllingFieldValues>
+                <controllingFieldValues>Captioning and Translations</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mobile bug</fullName>
+                <default>false</default>
+                <controllingFieldValues>Accomplishments</controllingFieldValues>
+                <controllingFieldValues>Analytics</controllingFieldValues>
+                <controllingFieldValues>Assessments</controllingFieldValues>
+                <controllingFieldValues>Business Analytics</controllingFieldValues>
+                <controllingFieldValues>Captioning and Translations</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mobile improvement</fullName>
+                <default>false</default>
+                <controllingFieldValues>Accomplishments</controllingFieldValues>
+                <controllingFieldValues>Analytics</controllingFieldValues>
+                <controllingFieldValues>Assessments</controllingFieldValues>
+                <controllingFieldValues>Business Analytics</controllingFieldValues>
+                <controllingFieldValues>Captioning and Translations</controllingFieldValues>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>JIRA_Project_Assignment__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Same project selection as you would on JIRA :)</inlineHelpText>
+        <label>JIRA Project Assignment</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Accomplishments</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Analytics</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Assessments</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Business Analytics</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Captioning and Translations</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Certificates</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>China</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Class Platform</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Community Operations</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Content Experience and Teaching</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>COS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Course Admin</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Course Success</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Coursera Style Guide</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Courservice</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Credentials</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Data Infrastructure</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Data-products</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DEPRECATED - Metrics</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Deprecated - Mobile</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Deprecated - Payments</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DEPRECATED - Peer Grading</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Enhancement Requests</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>External Integrations</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>flex social</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Front End Infrastructure</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Good Ideas</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Grading Services</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Growth</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Infra Cour</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Infra Services</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Infrastructure</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>internal products</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>JITR</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Kookaburra</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Learner UX</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Localization</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mascourade</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MGROWTH</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MO - DEPRECATED</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MOBILE CREW</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MOBILE Features</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mobile Flex</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Monitoring and Fire Fighting Tools</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Notification Server</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Operational Excellence</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Paid Learners</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Placement Services</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Proctoring</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Production Change Management</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Quality Assurance</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Site Admin</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Specializations</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>STAR</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Support Docs</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Test, Build and Deploy Framework</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Textbooks</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>the FLEX project</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Unverified Issues</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VC on Phoenix</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Whitelabel</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>www</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Origin</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>OwnerId</fullName>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ParentId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Priority</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>High</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Medium</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Reason</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>User didn&apos;t attend training</fullName>
+                <default>false</default>
+                <cssExposed>false</cssExposed>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Complex functionality</fullName>
+                <default>false</default>
+                <cssExposed>false</cssExposed>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Existing problem</fullName>
+                <default>false</default>
+                <cssExposed>false</cssExposed>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Instructions not clear</fullName>
+                <default>false</default>
+                <cssExposed>false</cssExposed>
+            </picklistValues>
+            <picklistValues>
+                <fullName>New problem</fullName>
+                <default>false</default>
+                <cssExposed>false</cssExposed>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>SourceId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Status</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>On Hold</fullName>
+                <default>false</default>
+                <closed>false</closed>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Escalated</fullName>
+                <default>false</default>
+                <closed>false</closed>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Closed</fullName>
+                <default>false</default>
+                <closed>true</closed>
+            </picklistValues>
+            <picklistValues>
+                <fullName>New</fullName>
+                <default>true</default>
+                <closed>false</closed>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Subject</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>SuppliedCompany</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>SuppliedEmail</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>SuppliedName</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>SuppliedPhone</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>Type</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>Question</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Reporting/Data</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Process/Systems Design</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Collateral</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Contacts and Campaigns</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>ezwf__easy_workflow__c</fullName>
+        <defaultValue>&quot;n3w&quot;</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Task Completed</label>
+        <length>50000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <listViews>
+        <fullName>AllOpenCases</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All Open Cases</label>
+    </listViews>
+    <listViews>
+        <fullName>MyCases</fullName>
+        <filterScope>Mine</filterScope>
+        <label>My Cases</label>
+    </listViews>
+    <listViews>
+        <fullName>MyOpenCases</fullName>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <label>My Open Cases</label>
+    </listViews>
+    <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
+    <recordTypeTrackHistory>true</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Business_Operations</fullName>
+        <active>true</active>
+        <businessProcess>Business Operations</businessProcess>
+        <description>Case type for team process, internal reporting, and business workflow-related operations</description>
+        <label>Business Operations</label>
+        <picklistValues>
+            <picklist>Issue_Type__c</picklist>
+            <values>
+                <fullName>Bug</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Epic</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Improvement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mobile bug</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mobile improvement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mobile story</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Feature</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Story</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sub-task</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Task</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Technical task</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>JIRA_Project_Assignment__c</picklist>
+            <values>
+                <fullName>Accomplishments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Analytics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Assessments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business Analytics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>COS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Captioning and Translations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Certificates</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>China</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Class Platform</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Community Operations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Content Experience and Teaching</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Course Admin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Course Success</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Coursera Style Guide</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Courservice</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Credentials</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DEPRECATED - Metrics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DEPRECATED - Peer Grading</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Data Infrastructure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Data-products</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deprecated - Mobile</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deprecated - Payments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Enhancement Requests</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>External Integrations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Front End Infrastructure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Good Ideas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Grading Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Growth</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Infra Cour</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Infra Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Infrastructure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>JITR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Kookaburra</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Learner UX</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Localization</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MGROWTH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MO - DEPRECATED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MOBILE CREW</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MOBILE Features</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mascourade</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mobile Flex</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monitoring and Fire Fighting Tools</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Notification Server</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Operational Excellence</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Paid Learners</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Placement Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Proctoring</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Production Change Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Quality Assurance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>STAR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Site Admin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Specializations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Support Docs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Test%2C Build and Deploy Framework</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Textbooks</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unverified Issues</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VC on Phoenix</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Whitelabel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>flex social</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>internal products</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>the FLEX project</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>www</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Origin</picklist>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason</picklist>
+            <values>
+                <fullName>Complex functionality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Existing problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Instructions not clear</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>User didn%27t attend training</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Process%2FSystems Design</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Question</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reporting%2FData</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Learner_Operations</fullName>
+        <active>true</active>
+        <businessProcess>Learner Operations</businessProcess>
+        <description>Case type for learner- and learner-related operations (will create a ticket in Zendesk)</description>
+        <label>Learner Operations</label>
+        <picklistValues>
+            <picklist>Issue_Type__c</picklist>
+            <values>
+                <fullName>Bug</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Epic</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Improvement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mobile bug</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mobile improvement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mobile story</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Feature</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Story</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sub-task</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Task</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Technical task</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>JIRA_Project_Assignment__c</picklist>
+            <values>
+                <fullName>Accomplishments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Analytics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Assessments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business Analytics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>COS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Captioning and Translations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Certificates</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>China</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Class Platform</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Community Operations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Content Experience and Teaching</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Course Admin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Course Success</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Coursera Style Guide</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Courservice</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Credentials</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DEPRECATED - Metrics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DEPRECATED - Peer Grading</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Data Infrastructure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Data-products</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deprecated - Mobile</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deprecated - Payments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Enhancement Requests</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>External Integrations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Front End Infrastructure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Good Ideas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Grading Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Growth</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Infra Cour</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Infra Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Infrastructure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>JITR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Kookaburra</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Learner UX</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Localization</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MGROWTH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MO - DEPRECATED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MOBILE CREW</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MOBILE Features</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mascourade</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mobile Flex</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monitoring and Fire Fighting Tools</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Notification Server</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Operational Excellence</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Paid Learners</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Placement Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Proctoring</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Production Change Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Quality Assurance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>STAR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Site Admin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Specializations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Support Docs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Test%2C Build and Deploy Framework</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Textbooks</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unverified Issues</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VC on Phoenix</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Whitelabel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>flex social</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>internal products</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>the FLEX project</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>www</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Origin</picklist>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason</picklist>
+            <values>
+                <fullName>Complex functionality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Existing problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Instructions not clear</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>User didn%27t attend training</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Question</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Marketing_Operations</fullName>
+        <active>true</active>
+        <businessProcess>Marketing Operations</businessProcess>
+        <description>Case type for collateral and external facing-related content</description>
+        <label>Marketing Operations</label>
+        <picklistValues>
+            <picklist>Issue_Type__c</picklist>
+            <values>
+                <fullName>Bug</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Epic</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Improvement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mobile bug</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mobile improvement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mobile story</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Feature</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Story</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sub-task</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Task</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Technical task</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>JIRA_Project_Assignment__c</picklist>
+            <values>
+                <fullName>Accomplishments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Analytics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Assessments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business Analytics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>COS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Captioning and Translations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Certificates</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>China</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Class Platform</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Community Operations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Content Experience and Teaching</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Course Admin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Course Success</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Coursera Style Guide</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Courservice</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Credentials</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DEPRECATED - Metrics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DEPRECATED - Peer Grading</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Data Infrastructure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Data-products</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deprecated - Mobile</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deprecated - Payments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Enhancement Requests</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>External Integrations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Front End Infrastructure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Good Ideas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Grading Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Growth</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Infra Cour</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Infra Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Infrastructure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>JITR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Kookaburra</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Learner UX</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Localization</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MGROWTH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MO - DEPRECATED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MOBILE CREW</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MOBILE Features</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mascourade</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mobile Flex</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monitoring and Fire Fighting Tools</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Notification Server</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Operational Excellence</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Paid Learners</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Placement Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Proctoring</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Production Change Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Quality Assurance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>STAR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Site Admin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Specializations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Support Docs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Test%2C Build and Deploy Framework</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Textbooks</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unverified Issues</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VC on Phoenix</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Whitelabel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>flex social</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>internal products</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>the FLEX project</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>www</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Origin</picklist>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason</picklist>
+            <values>
+                <fullName>Complex functionality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Existing problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Instructions not clear</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>User didn%27t attend training</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Collateral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contacts and Campaigns</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Question</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Product_Operations</fullName>
+        <active>true</active>
+        <businessProcess>Product Operations</businessProcess>
+        <description>Case type for product- and product-related operations (will create a ticket in JIRA)</description>
+        <label>Product Operations</label>
+        <picklistValues>
+            <picklist>Issue_Type__c</picklist>
+            <values>
+                <fullName>Bug</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Epic</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Improvement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mobile bug</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mobile improvement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mobile story</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Feature</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Story</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sub-task</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Task</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Technical task</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>JIRA_Project_Assignment__c</picklist>
+            <values>
+                <fullName>Accomplishments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Analytics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Assessments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business Analytics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>COS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Captioning and Translations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Certificates</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>China</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Class Platform</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Community Operations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Content Experience and Teaching</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Course Admin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Course Success</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Coursera Style Guide</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Courservice</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Credentials</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DEPRECATED - Metrics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DEPRECATED - Peer Grading</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Data Infrastructure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Data-products</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deprecated - Mobile</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deprecated - Payments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Enhancement Requests</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>External Integrations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Front End Infrastructure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Good Ideas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Grading Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Growth</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Infra Cour</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Infra Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Infrastructure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>JITR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Kookaburra</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Learner UX</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Localization</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MGROWTH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MO - DEPRECATED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MOBILE CREW</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MOBILE Features</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mascourade</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mobile Flex</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monitoring and Fire Fighting Tools</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Notification Server</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Operational Excellence</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Paid Learners</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Placement Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Proctoring</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Production Change Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Quality Assurance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>STAR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Site Admin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Specializations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Support Docs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Test%2C Build and Deploy Framework</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Textbooks</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unverified Issues</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VC on Phoenix</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Whitelabel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>flex social</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>internal products</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>the FLEX project</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>www</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Origin</picklist>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason</picklist>
+            <values>
+                <fullName>Complex functionality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Existing problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Instructions not clear</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>User didn%27t attend training</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Question</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Technical_Admin</fullName>
+        <active>true</active>
+        <businessProcess>Business Operations</businessProcess>
+        <description>Case type for troubleshooting in SFDC or other IT- or admin-related questions</description>
+        <label>Technical/Admin</label>
+        <picklistValues>
+            <picklist>Issue_Type__c</picklist>
+            <values>
+                <fullName>Bug</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Epic</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Improvement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mobile bug</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mobile improvement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mobile story</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Feature</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Story</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sub-task</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Task</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Technical task</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>JIRA_Project_Assignment__c</picklist>
+            <values>
+                <fullName>Accomplishments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Analytics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Assessments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business Analytics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>COS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Captioning and Translations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Certificates</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>China</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Class Platform</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Community Operations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Content Experience and Teaching</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Course Admin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Course Success</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Coursera Style Guide</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Courservice</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Credentials</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DEPRECATED - Metrics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DEPRECATED - Peer Grading</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Data Infrastructure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Data-products</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deprecated - Mobile</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deprecated - Payments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Enhancement Requests</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>External Integrations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Front End Infrastructure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Good Ideas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Grading Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Growth</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Infra Cour</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Infra Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Infrastructure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>JITR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Kookaburra</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Learner UX</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Localization</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MGROWTH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MO - DEPRECATED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MOBILE CREW</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MOBILE Features</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mascourade</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mobile Flex</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monitoring and Fire Fighting Tools</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Notification Server</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Operational Excellence</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Paid Learners</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Placement Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Proctoring</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Production Change Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Quality Assurance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>STAR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Site Admin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Specializations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Support Docs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Test%2C Build and Deploy Framework</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Textbooks</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unverified Issues</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VC on Phoenix</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Whitelabel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>flex social</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>internal products</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>the FLEX project</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>www</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Origin</picklist>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason</picklist>
+            <values>
+                <fullName>Complex functionality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Existing problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Instructions not clear</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>User didn%27t attend training</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Question</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>CASES.CASE_NUMBER</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CASES.SUBJECT</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CASES.CREATED_DATE</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CASES.PRIORITY</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>CASES.CASE_NUMBER</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CASES.SUBJECT</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>ACCOUNT.NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CASES.STATUS</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CASES.CASE_NUMBER</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CASES.SUBJECT</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>ACCOUNT.NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CASES.STATUS</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>CASES.CASE_NUMBER</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CASES.SUBJECT</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CASES.STATUS</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CASES.CREATED_DATE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CORE.USERS.ALIAS</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Private</sharingModel>
+    <webLinks>
+        <fullName>Create_Action_Plan</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Create Action Plan</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>/apex/ActionPlanCreation?refType=Case&amp;refId={!Case.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Create_Action_Plans</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Create Case Action Plans</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>var records = {!GETRECORDIDS( $ObjectType.Case)} ;
+var oName = &apos;Case&apos;;
+var error = false;
+var msj = &apos;&apos;;
+
+if( records.length &gt; 40 ) { 
+    error = true; 
+    msj =&apos;{!$Label.ap_Errors_moreThan20records}&apos;;
+}
+if( records.length &lt; 1 ){
+   error = true;
+   msj = &apos;{!$Label.ap_Errors_selectOneRecord}&apos;; 
+}
+
+if( error ) {
+       alert(msj);    
+}
+else{
+       location.href = &apos;/apex/ActionPlanCreation?refId=&apos;+records+&apos;&amp;refType=&apos;+oName;
+}</url>
+    </webLinks>
+</CustomObject>

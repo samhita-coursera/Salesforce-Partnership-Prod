@@ -1,0 +1,1296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fields>
+        <fullName>Actual_Submit_for_Launch_Date__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Pulled from EDW</inlineHelpText>
+        <label>Actual Submit for Launch Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Average_Course_Rating__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Pulled from EDW</inlineHelpText>
+        <label>Average Course Rating</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Beta_Test_End_Date__c</fullName>
+        <description>Captures the end date for beta testing. By default 7 days after beta testing start date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>End date for beta testing. By default 7 days after beta testing start date</inlineHelpText>
+        <label>Beta Test End Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Beta_Test_Invite_URL__c</fullName>
+        <externalId>false</externalId>
+        <formula>Group_Invitation_URL__c + &quot;/invitation&quot;</formula>
+        <label>Beta Test Invite URL</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Beta_Test_Monday_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Beta Test Monday Start Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Beta_Test_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Beta Test Status</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Beta_Testing_Rating__c</fullName>
+        <description>Captures rating for the course in beta testing</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Beta Testing Rating Valid Range is 0.00 to 5.00</inlineHelpText>
+        <label>Beta Testing Rating</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CDP_Launch_Date__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Pulled from EDW</inlineHelpText>
+        <label>CDP Launch Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CDP_Pre_Enroll_Read_Date__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Currently NOT loaded from EDW, see Course Owner for details</inlineHelpText>
+        <label>CDP Pre-Enroll Read Date</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Campaign_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Parent_Opportunity__r.Campaign.Name</formula>
+        <label>Campaign Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Capstone__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Capstone?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Count_NPS_1st_Week__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Pulled from EDW</inlineHelpText>
+        <label>Count NPS - 1st Week</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Count_NPS_End_of_Course__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Pulled from EDW</inlineHelpText>
+        <label>Count NPS - End of Course</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Count_of_sourcing_universities__c</fullName>
+        <externalId>false</externalId>
+        <label>Count of sourcing universities</label>
+        <summaryForeignKey>Course_Account_Association__c.Course__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Course_Deleted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Pulled from EDW</inlineHelpText>
+        <label>Course Deleted?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Course_Difficulty_Level__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Pulled from EDW</inlineHelpText>
+        <label>Course Difficulty Level</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Course_ID__c</fullName>
+        <caseSensitive>true</caseSensitive>
+        <externalId>true</externalId>
+        <inlineHelpText>Pulled from EDW</inlineHelpText>
+        <label>Course ID</label>
+        <length>50</length>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Course_Launch_Date__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Pulled from EDW</inlineHelpText>
+        <label>Real Course Launch Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Course_Launch_Month__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(MONTH( Course_Launch_Date__c ), 
+1, &quot;January&quot;, 
+2, &quot;February&quot;, 
+3, &quot;March&quot;, 
+4, &quot;April&quot;, 
+5, &quot;May&quot;, 
+6, &quot;June&quot;, 
+7, &quot;July&quot;, 
+8, &quot;August&quot;, 
+9, &quot;September&quot;, 
+10, &quot;October&quot;, 
+11, &quot;November&quot;, 
+12, &quot;December&quot;, 
+&quot;None&quot;)</formula>
+        <label>Course Launch - Month</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Course_Launch_Quarter__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(MONTH( Course_Launch_Date__c ), 
+1, &quot;Q1&quot;, 
+2, &quot;Q1&quot;, 
+3, &quot;Q1&quot;, 
+4, &quot;Q2&quot;, 
+5, &quot;Q2&quot;, 
+6, &quot;Q2&quot;, 
+7, &quot;Q3&quot;, 
+8, &quot;Q3&quot;, 
+9, &quot;Q3&quot;, 
+10, &quot;Q4&quot;, 
+11, &quot;Q4&quot;, 
+12, &quot;Q4&quot;, 
+&quot;None&quot;)</formula>
+        <label>Course Launch - Quarter</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Course_Launch_Year__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(YEAR( Course_Launch_Date__c ), 
+2012, &quot;2012&quot;, 
+2013, &quot;2013&quot;, 
+2014, &quot;2014&quot;, 
+2015, &quot;2015&quot;, 
+2016, &quot;2016&quot;, 
+2017, &quot;2017&quot;, 
+2018, &quot;2018&quot;, 
+2019, &quot;2019&quot;, 
+2020, &quot;2020&quot;, 
+&quot;None&quot;)</formula>
+        <label>Course Launch - Year</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Course_Mentors__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Course Mentors?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Course_Name__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Pulled from EDW</inlineHelpText>
+        <label>Course Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Course_Restricted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Pulled from EDW</inlineHelpText>
+        <label>Course Restricted?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Course_SFDC_Id__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASESAFEID(Id)</formula>
+        <label>Course SFDC Id</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Cume_Cash_Sales_Revenue__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Pulled from EDW</inlineHelpText>
+        <label>Cume Cash Sales (Revenue)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Difference_in_Live_and_Beta_Rating__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF((ISBLANK(Average_Course_Rating__c) ||  ISBLANK(Beta_Testing_Rating__c)),null,Average_Course_Rating__c -  Beta_Testing_Rating__c)</formula>
+        <inlineHelpText>Difference between Avg. Course Rating (Live) and Beta Course rating</inlineHelpText>
+        <label>Difference in Live and Beta Rating</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Estimated_Workload__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Pulled from EDW</inlineHelpText>
+        <label>Estimated Workload</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Expected_Submit_for_Launch_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Expected Submit for Launch Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>First_Partner_for_Course__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>First Partner for Course</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>SourcedCourses</relationshipLabel>
+        <relationshipName>ContentSourced</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Geopricing_enabled__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Pulled from EDW</inlineHelpText>
+        <label>Geopricing enabled?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Group_Invitation_URL__c</fullName>
+        <externalId>false</externalId>
+        <label>Group URL</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Initial_Feedback_Given__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Initial Feedback Given</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Initial_Feedback_Notes__c</fullName>
+        <externalId>false</externalId>
+        <label>Initial Feedback Notes</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Instructor_Guest_Agreements_collected__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Instructor/Guest Agreements collected</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Language__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Pulled from EDW</inlineHelpText>
+        <label>Language</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NPS_1st_Week__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Pulled from EDW</inlineHelpText>
+        <label>NPS - 1st Week</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NPS_End_of_Course__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Pulled from EDW</inlineHelpText>
+        <label>NPS - End of Course</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Parent_Campaign__c</fullName>
+        <externalId>false</externalId>
+        <formula>Parent_Opportunity__r.Campaign.Parent.Name</formula>
+        <label>Parent Campaign</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Parent_Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Parent Opportunity</label>
+        <lookupFilter>
+            <active>true</active>
+            <booleanFilter>(1 AND 2)</booleanFilter>
+            <filterItems>
+                <field>Opportunity.Account.Id</field>
+                <operation>equals</operation>
+                <valueField>$Source.First_Partner_for_Course__c</valueField>
+            </filterItems>
+            <filterItems>
+                <field>Opportunity.StageName</field>
+                <operation>equals</operation>
+                <value>Closed / Won</value>
+            </filterItems>
+            <infoMessage>Select one of the Closed/won opportunity</infoMessage>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Courses</relationshipLabel>
+        <relationshipName>Courses</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Parent_Specialization_ID__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Pulled from EDW</inlineHelpText>
+        <label>Parent Specialization ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Partner_Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>Pulled from EDW</inlineHelpText>
+        <label>Partner Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Courses</relationshipLabel>
+        <relationshipName>Courses</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Partner_ID__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Pulled from EDW</inlineHelpText>
+        <label>Partner ID</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Partner_Name__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Pulled from EDW. If &gt;1 partner, string shows a comma-separated list of partners</inlineHelpText>
+        <label>Partner</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Platform_Link_to_Content__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;www.coursera.org/teach/&quot; + Name</formula>
+        <label>Platform Link to Content</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Prem_Grading_Enabled__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Pulled from EDW</inlineHelpText>
+        <label>Prem. Grading Enabled?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Preview_Certificate__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Preview Certificate</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Price__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Pulled from EDW</inlineHelpText>
+        <label>Price</label>
+        <precision>12</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Pricing_on_Mobile__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Pricing on Mobile</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Pricing_on_Web__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Pricing on Web</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Primary_Domain__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Pulled from EDW</inlineHelpText>
+        <label>Primary Domain</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Arts and Humanities</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Business</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Computer Science</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Data Science</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Language Learning</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Life Sciences</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Math and Logic</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Personal Development</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Physical Science and Engineering</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Social Sciences</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Not Specified</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Primary_Subdomain__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Pulled from EDW</inlineHelpText>
+        <label>Primary Subdomain</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Production_Stage__c</fullName>
+        <externalId>false</externalId>
+        <label>Production Stage</label>
+        <picklist>
+            <picklistValues>
+                <fullName>In Production</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Review</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Launched</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>QA_Notes__c</fullName>
+        <externalId>false</externalId>
+        <label>QA Notes</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Quality_Review_Notes__c</fullName>
+        <externalId>false</externalId>
+        <label>Quality Review Notes</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Removed_TFS_as_Mentor__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Removed TFS as Mentor</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Run_validation_script__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Run validation script</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>S12N_Order__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Pulled from EDW</inlineHelpText>
+        <label>Specialization Course Order</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>S12N_Parent__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>Pulled from EDW</inlineHelpText>
+        <label>Parent Specialization</label>
+        <referenceTo>Specialization__c</referenceTo>
+        <relationshipLabel>Courses</relationshipLabel>
+        <relationshipName>Courses</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SEO_Optimized__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>SEO Optimized</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Secondary_Domain__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Pulled from EDW</inlineHelpText>
+        <label>Secondary Domain</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Secondary_Subdomain__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Pulled from EDW</inlineHelpText>
+        <label>Secondary Subdomain</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sessions_Enabled__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Pulled from EDW</inlineHelpText>
+        <label>Sessions Enabled?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Set_Sessions__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Set Sessions</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Should_Prem_Grading_be_Enabled__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Parent_Opportunity__r.Account.Premium_Grading_Setting__c)</formula>
+        <label>Should Prem Grading be Enabled?</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Signed_Confirmation_Letter_Course_only__c</fullName>
+        <externalId>false</externalId>
+        <label>Signed Confirmation Letter (Course only)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Sourcing_Cycle__c</fullName>
+        <externalId>false</externalId>
+        <label>Sourcing Cycle</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Specialization_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>S12N_Parent__r.S12N_Name__c</formula>
+        <label>Specialization Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Submitted_to_TFS__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Submitted to TFS</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>TFS_Confirmed_Review__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>TFS Confirmed Review</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>T_L_Beta_Testing_Feedback__c</fullName>
+        <externalId>false</externalId>
+        <label>T&amp;L Beta-Testing Feedback</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>T_L_Reviewer__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>T&amp;L Reviewer</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Courses</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>T_L_Training__c</fullName>
+        <description>Captures the type of T&amp;L training</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Captures the T&amp;L training type</inlineHelpText>
+        <label>T&amp;L Training</label>
+        <picklist>
+            <picklistValues>
+                <fullName>In-Person Workshop</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Virtual Workshop</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pedagogy Call</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Already Trained</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>None</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Total_Audit_Enrollments__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Pulled from EDW</inlineHelpText>
+        <label>Total Audit Enrollments</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Course_Ratings__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Pulled from EDW</inlineHelpText>
+        <label>Total Course Ratings</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Enrollments__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Pulled from EDW</inlineHelpText>
+        <label>Total Enrollments</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_FinAid_Enrollments__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Pulled from EDW</inlineHelpText>
+        <label>Total FinAid Enrollments</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Paid_Enrollments__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Pulled from EDW</inlineHelpText>
+        <label>Total Paid Enrollments</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Verification_Enabled__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Pulled from EDW</inlineHelpText>
+        <label>Verification Enabled?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Will_this_be_beta_tested__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Will this be beta-tested?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Working_Launch_Date_Month__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(MONTH(  Working_Launch_Date__c ), 
+1, &quot;January&quot;, 
+2, &quot;February&quot;, 
+3, &quot;March&quot;, 
+4, &quot;April&quot;, 
+5, &quot;May&quot;, 
+6, &quot;June&quot;, 
+7, &quot;July&quot;, 
+8, &quot;August&quot;, 
+9, &quot;September&quot;, 
+10, &quot;October&quot;, 
+11, &quot;November&quot;, 
+12, &quot;December&quot;, 
+&quot;None&quot;)</formula>
+        <label>Working Launch Date - Month</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Working_Launch_Date_Quarter__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(MONTH( Working_Launch_Date__c ), 
+1, &quot;Q1&quot;, 
+2, &quot;Q1&quot;, 
+3, &quot;Q1&quot;, 
+4, &quot;Q2&quot;, 
+5, &quot;Q2&quot;, 
+6, &quot;Q2&quot;, 
+7, &quot;Q3&quot;, 
+8, &quot;Q3&quot;, 
+9, &quot;Q3&quot;, 
+10, &quot;Q4&quot;, 
+11, &quot;Q4&quot;, 
+12, &quot;Q4&quot;, 
+&quot;None&quot;)</formula>
+        <label>Working Launch Date - Quarter</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Working_Launch_Date_Year__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(YEAR(  Working_Launch_Date__c  ), 
+2012, &quot;2012&quot;, 
+2013, &quot;2013&quot;, 
+2014, &quot;2014&quot;, 
+2015, &quot;2015&quot;, 
+2016, &quot;2016&quot;, 
+2017, &quot;2017&quot;, 
+2018, &quot;2018&quot;, 
+2019, &quot;2019&quot;, 
+2020, &quot;2020&quot;, 
+&quot;None&quot;)</formula>
+        <label>Working Launch Date - Year</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Working_Launch_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Working Launch Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <label>Course</label>
+    <listViews>
+        <fullName>Alexandra_s_View</fullName>
+        <columns>Course_Name__c</columns>
+        <columns>NAME</columns>
+        <columns>Primary_Domain__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>T_L_Reviewer__c</columns>
+        <columns>T_L_Beta_Testing_Feedback__c</columns>
+        <columns>Beta_Testing_Rating__c</columns>
+        <columns>Beta_Test_Monday_Start_Date__c</columns>
+        <columns>Will_this_be_beta_tested__c</columns>
+        <columns>Group_Invitation_URL__c</columns>
+        <columns>Beta_Test_Invite_URL__c</columns>
+        <columns>Beta_Test_Status__c</columns>
+        <columns>Average_Course_Rating__c</columns>
+        <columns>Campaign_Name__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Beta_Test_Monday_Start_Date__c</field>
+            <operation>greaterOrEqual</operation>
+            <value>7/1/2017</value>
+        </filters>
+        <filters>
+            <field>Beta_Test_Monday_Start_Date__c</field>
+            <operation>lessOrEqual</operation>
+            <value>7/10/2017</value>
+        </filters>
+        <label>NEW Beta Testing View - 2017</label>
+    </listViews>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Beta_Test_Courses_from_2016</fullName>
+        <columns>NAME</columns>
+        <columns>Beta_Test_Monday_Start_Date__c</columns>
+        <columns>Beta_Test_End_Date__c</columns>
+        <columns>Beta_Testing_Rating__c</columns>
+        <columns>Beta_Test_Invite_URL__c</columns>
+        <columns>Beta_Test_Status__c</columns>
+        <columns>Average_Course_Rating__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Beta_Test_Monday_Start_Date__c</field>
+            <operation>greaterThan</operation>
+            <value>12/31/2015</value>
+        </filters>
+        <filters>
+            <field>Beta_Test_Monday_Start_Date__c</field>
+            <operation>lessOrEqual</operation>
+            <value>12/31/2016</value>
+        </filters>
+        <label>Beta Test Courses from 2016</label>
+        <sharedTo>
+            <roleAndSubordinates>T_L</roleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Russian_Language_Content</fullName>
+        <booleanFilter>1 AND 2 AND 3</booleanFilter>
+        <columns>NAME</columns>
+        <columns>Course_Name__c</columns>
+        <columns>Specialization_Name__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>T_L_Reviewer__c</columns>
+        <columns>Beta_Test_Monday_Start_Date__c</columns>
+        <columns>Will_this_be_beta_tested__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Language__c</field>
+            <operation>equals</operation>
+            <value>Russian</value>
+        </filters>
+        <filters>
+            <field>Specialization_Name__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <filters>
+            <field>Course_Launch_Date__c</field>
+            <operation>equals</operation>
+        </filters>
+        <label>Russian Language RFP Content</label>
+        <sharedTo>
+            <role>T_L</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Year_to_Date_Beta_Testing_2017</fullName>
+        <columns>NAME</columns>
+        <columns>Course_Name__c</columns>
+        <columns>Specialization_Name__c</columns>
+        <columns>Primary_Domain__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>T_L_Reviewer__c</columns>
+        <columns>T_L_Training__c</columns>
+        <columns>Beta_Test_Monday_Start_Date__c</columns>
+        <columns>T_L_Beta_Testing_Feedback__c</columns>
+        <columns>Beta_Testing_Rating__c</columns>
+        <columns>Average_Course_Rating__c</columns>
+        <columns>Course_Launch_Date__c</columns>
+        <columns>Difference_in_Live_and_Beta_Rating__c</columns>
+        <columns>Will_this_be_beta_tested__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Beta_Test_Monday_Start_Date__c</field>
+            <operation>greaterOrEqual</operation>
+            <value>1/1/2017</value>
+        </filters>
+        <filters>
+            <field>Beta_Test_Monday_Start_Date__c</field>
+            <operation>lessOrEqual</operation>
+            <value>12/31/2017</value>
+        </filters>
+        <label>Year to Date Beta Testing</label>
+        <sharedTo>
+            <role>T_L</role>
+        </sharedTo>
+    </listViews>
+    <nameField>
+        <label>Course URL</label>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Courses</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Check_Beta_Test_Rating_Range</fullName>
+        <active>true</active>
+        <description>Checks if Beta Test is in range of 0.00 to 5.00</description>
+        <errorConditionFormula>OR(Beta_Testing_Rating__c &gt; 5.00,
+ Beta_Testing_Rating__c &lt;0)</errorConditionFormula>
+        <errorDisplayField>Beta_Testing_Rating__c</errorDisplayField>
+        <errorMessage>Please select Beta Test Rating between 0.00 to 5.00</errorMessage>
+    </validationRules>
+</CustomObject>

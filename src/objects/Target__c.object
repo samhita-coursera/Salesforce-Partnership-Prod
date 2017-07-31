@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fields>
+        <fullName>Audience_Category__c</fullName>
+        <description>Qualitative description of primary market/audience for content area target</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Qualitative description of primary market/audience for content area target</inlineHelpText>
+        <label>Audience</label>
+        <length>1200</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>7</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Content_Domain_Use__c</fullName>
+        <description>Primary content area or category on Coursera platform</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Primary content area or category on Coursera platform</inlineHelpText>
+        <label>Content Domain</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Creative/Arts &amp; Humanities</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Language Learning</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Business</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Tech/Computer Science</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Data/Data Science</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Life Sciences</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Math &amp; Logic</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Personal Development/Health</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Physical Science &amp; Engineering</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Social Sciences</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>true</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Content_Target_Language__c</fullName>
+        <description>Specific language of content target</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specific language of content target</inlineHelpText>
+        <label>Content Target Language</label>
+        <picklist>
+            <picklistValues>
+                <fullName>English</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>French</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Spanish</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Content_Target_Name__c</fullName>
+        <description>Full target name (to be used for reporting)</description>
+        <externalId>false</externalId>
+        <formula>if(month(Content_Target_Quarter__c)&lt;=3,&quot;Q1&quot;,
+if(month(Content_Target_Quarter__c)&lt;=6,&quot;Q2&quot;,
+if(month(Content_Target_Quarter__c)&lt;=9,&quot;Q3&quot;,
+&quot;Q4&quot;)))&amp;&quot;-&quot;&amp;RIGHT(TEXT(YEAR(Content_Target_Quarter__c)),2)
+&amp;&quot;: &quot;&amp;TEXT(Content_Domain_Use__c)&amp;&quot; - &quot;&amp;
+if(PBL_Specific__c=TRUE,&quot;PBL&quot;,&quot;&quot;)&amp;&quot; &quot;&amp;
+TEXT(Main_Course_Type__c)&amp;&quot; - &quot;&amp;Name</formula>
+        <inlineHelpText>Full target name (to be used for reporting)</inlineHelpText>
+        <label>Content Target Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Content_Target_Quarter_End__c</fullName>
+        <description>Last day of the quarter</description>
+        <externalId>false</externalId>
+        <formula>Content_Target_Quarter__c +89</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Last day of the quarter</inlineHelpText>
+        <label>Content Target Quarter End</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Content_Target_Quarter__c</fullName>
+        <defaultValue>if(year(today())=2016,
+if(month(today())=1,today()-day(today())+1,
+if(month(today())=2,today()-day(today())-31+1,
+if(month(today())=3,today()-day(today())-29-31+1,
+if(month(today())=4,today()-day(today())+1,
+if(month(today())=5,today()-day(today())-30+1,
+if(month(today())=6,today()-day(today())-31-30+1,
+if(month(today())=7,today()-day(today())+1,
+if(month(today())=8,today()-day(today())-31+1,
+if(month(today())=9,today()-day(today())-31-31+1,
+if(month(today())=10,today()-day(today())+1,
+if(month(today())=11,today()-day(today())-31+1,
+today()-day(today())-30-31+1))))))))))),
+if(month(today())=1,today()-day(today())+1,
+if(month(today())=2,today()-day(today())-31+1,
+if(month(today())=3,today()-day(today())-28-31+1,
+if(month(today())=4,today()-day(today())+1,
+if(month(today())=5,today()-day(today())-30+1,
+if(month(today())=6,today()-day(today())-31-30+1,
+if(month(today())=7,today()-day(today())+1,
+if(month(today())=8,today()-day(today())-31+1,
+if(month(today())=9,today()-day(today())-31-31+1,
+if(month(today())=10,today()-day(today())+1,
+if(month(today())=11,today()-day(today())-31+1,
+today()-day(today())-30-31+1))))))))))))</defaultValue>
+        <description>Identifies which quarter the specific content target aligns to; select the first day of the quarter</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Identifies which quarter the specific content target aligns to; select the first day of the quarter</inlineHelpText>
+        <label>Content Target Quarter</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>true</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Est_12m_Revenue__c</fullName>
+        <description>Estimated 12m revenue value of target</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Estimated 12m revenue value of target</inlineHelpText>
+        <label>Est. 12m Revenue</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>true</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Est_Monthly_Revenue__c</fullName>
+        <description>Calculated from Est. 12m revenue</description>
+        <externalId>false</externalId>
+        <formula>Est_12m_Revenue__c /12</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Calculated from Est. 12m revenue</inlineHelpText>
+        <label>Est. Monthly Revenue</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Main_Course_Type__c</fullName>
+        <description>The primary course type</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The primary course type</inlineHelpText>
+        <label>Main Course Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Course</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S12n</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Degree</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>true</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>PBL_Specific__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Checked if the content target is focused on PBL</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Checked if the content target is focused on PBL</inlineHelpText>
+        <label>Course or PBL</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Strongest_Target_Department__c</fullName>
+        <description>This is guidance for Partnership Managers on the most likely department to target for a specific content subject</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This is guidance for Partnership Managers on the most likely department to target for a specific content subject. (If &quot;Other,&quot; talk to Becky if a specific department is worth bucketing out separately in this list.)</inlineHelpText>
+        <label>Strongest Target Department</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Statistics/Mathematics</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Computer Science</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Business School</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Extension School</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>true</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Targeted_Partners__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>z Targeted Partners (Deprecated)</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Account.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Partnerships</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Content Targets</relationshipLabel>
+        <relationshipName>Content_Targets</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <label>Content Target</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>Content_Target_Quarter__c</columns>
+        <columns>NAME</columns>
+        <columns>Content_Domain_Use__c</columns>
+        <columns>Main_Course_Type__c</columns>
+        <columns>Audience_Category__c</columns>
+        <columns>Strongest_Target_Department__c</columns>
+        <columns>Est_12m_Revenue__c</columns>
+        <columns>Est_Monthly_Revenue__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Targets / All Time</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Targets_All_Time_Experimental</fullName>
+        <columns>Content_Target_Quarter__c</columns>
+        <columns>NAME</columns>
+        <columns>Content_Domain_Use__c</columns>
+        <columns>Main_Course_Type__c</columns>
+        <columns>Audience_Category__c</columns>
+        <columns>Strongest_Target_Department__c</columns>
+        <columns>Est_12m_Revenue__c</columns>
+        <columns>Est_Monthly_Revenue__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>NAME</field>
+            <operation>contains</operation>
+            <value>Experimental</value>
+        </filters>
+        <label>All Targets / All Time Experimental</label>
+    </listViews>
+    <listViews>
+        <fullName>Targets_Q1_16</fullName>
+        <columns>Content_Target_Quarter__c</columns>
+        <columns>Main_Course_Type__c</columns>
+        <columns>NAME</columns>
+        <columns>Content_Domain_Use__c</columns>
+        <columns>Audience_Category__c</columns>
+        <columns>Strongest_Target_Department__c</columns>
+        <columns>Est_12m_Revenue__c</columns>
+        <columns>Est_Monthly_Revenue__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Content_Target_Quarter__c</field>
+            <operation>greaterOrEqual</operation>
+            <value>1/1/2016</value>
+        </filters>
+        <filters>
+            <field>Content_Target_Quarter__c</field>
+            <operation>lessOrEqual</operation>
+            <value>3/31/2016</value>
+        </filters>
+        <label>Targets &gt; FY16 &gt; Q1&apos;16</label>
+    </listViews>
+    <listViews>
+        <fullName>Targets_Q2_16</fullName>
+        <columns>Content_Target_Quarter__c</columns>
+        <columns>NAME</columns>
+        <columns>Content_Domain_Use__c</columns>
+        <columns>Main_Course_Type__c</columns>
+        <columns>Audience_Category__c</columns>
+        <columns>Strongest_Target_Department__c</columns>
+        <columns>Est_12m_Revenue__c</columns>
+        <columns>Est_Monthly_Revenue__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Content_Target_Quarter__c</field>
+            <operation>greaterOrEqual</operation>
+            <value>4/1/2016</value>
+        </filters>
+        <filters>
+            <field>Content_Target_Quarter__c</field>
+            <operation>lessOrEqual</operation>
+            <value>6/30/2016</value>
+        </filters>
+        <label>Targets &gt; FY16 &gt; Q2&apos;16</label>
+    </listViews>
+    <listViews>
+        <fullName>Targets_Q3_16</fullName>
+        <columns>Content_Target_Quarter__c</columns>
+        <columns>NAME</columns>
+        <columns>Content_Domain_Use__c</columns>
+        <columns>Main_Course_Type__c</columns>
+        <columns>Audience_Category__c</columns>
+        <columns>Strongest_Target_Department__c</columns>
+        <columns>Est_12m_Revenue__c</columns>
+        <columns>Est_Monthly_Revenue__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Content_Target_Quarter__c</field>
+            <operation>greaterOrEqual</operation>
+            <value>7/1/2016</value>
+        </filters>
+        <filters>
+            <field>Content_Target_Quarter__c</field>
+            <operation>lessOrEqual</operation>
+            <value>9/30/2016</value>
+        </filters>
+        <label>Targets &gt; FY16 &gt; Q3&apos;16</label>
+    </listViews>
+    <listViews>
+        <fullName>Targets_Q4_16</fullName>
+        <columns>Content_Target_Quarter__c</columns>
+        <columns>NAME</columns>
+        <columns>Content_Domain_Use__c</columns>
+        <columns>Main_Course_Type__c</columns>
+        <columns>Audience_Category__c</columns>
+        <columns>Strongest_Target_Department__c</columns>
+        <columns>Est_12m_Revenue__c</columns>
+        <columns>Est_Monthly_Revenue__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Content_Target_Quarter__c</field>
+            <operation>greaterOrEqual</operation>
+            <value>10/1/2016</value>
+        </filters>
+        <filters>
+            <field>Content_Target_Quarter__c</field>
+            <operation>lessOrEqual</operation>
+            <value>12/31/2016</value>
+        </filters>
+        <label>Targets &gt; FY16 &gt; Q4&apos;16</label>
+    </listViews>
+    <listViews>
+        <fullName>Targets_This_Quarter_Business</fullName>
+        <columns>NAME</columns>
+        <columns>Main_Course_Type__c</columns>
+        <columns>Audience_Category__c</columns>
+        <columns>Strongest_Target_Department__c</columns>
+        <columns>Est_12m_Revenue__c</columns>
+        <columns>Est_Monthly_Revenue__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <columns>Content_Target_Quarter__c</columns>
+        <columns>Content_Domain_Use__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Content_Target_Quarter__c</field>
+            <operation>equals</operation>
+            <value>THIS_QUARTER</value>
+        </filters>
+        <filters>
+            <field>Content_Domain_Use__c</field>
+            <operation>equals</operation>
+            <value>Business</value>
+        </filters>
+        <label>Targets &gt; CQ: Business</label>
+    </listViews>
+    <listViews>
+        <fullName>Targets_This_Quarter_Creative_Soc_LL</fullName>
+        <columns>Content_Target_Quarter__c</columns>
+        <columns>Main_Course_Type__c</columns>
+        <columns>NAME</columns>
+        <columns>Content_Domain_Use__c</columns>
+        <columns>Audience_Category__c</columns>
+        <columns>Strongest_Target_Department__c</columns>
+        <columns>Est_12m_Revenue__c</columns>
+        <columns>Est_Monthly_Revenue__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Content_Target_Quarter__c</field>
+            <operation>equals</operation>
+            <value>THIS_QUARTER</value>
+        </filters>
+        <filters>
+            <field>Content_Domain_Use__c</field>
+            <operation>equals</operation>
+            <value>Creative/Arts &amp; Humanities,Language Learning,Social Sciences</value>
+        </filters>
+        <label>Targets &gt; CQ: Creative/Soc/Languages</label>
+    </listViews>
+    <listViews>
+        <fullName>Targets_This_Quarter_Data</fullName>
+        <columns>Content_Target_Quarter__c</columns>
+        <columns>Main_Course_Type__c</columns>
+        <columns>NAME</columns>
+        <columns>Content_Domain_Use__c</columns>
+        <columns>Audience_Category__c</columns>
+        <columns>Strongest_Target_Department__c</columns>
+        <columns>Est_12m_Revenue__c</columns>
+        <columns>Est_Monthly_Revenue__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Content_Target_Quarter__c</field>
+            <operation>equals</operation>
+            <value>THIS_QUARTER</value>
+        </filters>
+        <filters>
+            <field>Content_Domain_Use__c</field>
+            <operation>equals</operation>
+            <value>Data/Data Science</value>
+        </filters>
+        <label>Targets &gt; CQ: Data</label>
+    </listViews>
+    <listViews>
+        <fullName>Targets_This_Quarter_Math_Sciences</fullName>
+        <columns>Content_Target_Quarter__c</columns>
+        <columns>Main_Course_Type__c</columns>
+        <columns>NAME</columns>
+        <columns>Content_Domain_Use__c</columns>
+        <columns>Audience_Category__c</columns>
+        <columns>Strongest_Target_Department__c</columns>
+        <columns>Est_12m_Revenue__c</columns>
+        <columns>Est_Monthly_Revenue__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Content_Target_Quarter__c</field>
+            <operation>equals</operation>
+            <value>THIS_QUARTER</value>
+        </filters>
+        <filters>
+            <field>Content_Domain_Use__c</field>
+            <operation>equals</operation>
+            <value>Life Sciences,Math &amp; Logic,Physical Science &amp; Engineering</value>
+        </filters>
+        <label>Targets &gt; CQ: Math/Life/PhySciences</label>
+    </listViews>
+    <listViews>
+        <fullName>Targets_This_Quarter_Personal_Dev</fullName>
+        <columns>Content_Target_Quarter__c</columns>
+        <columns>Main_Course_Type__c</columns>
+        <columns>NAME</columns>
+        <columns>Content_Domain_Use__c</columns>
+        <columns>Audience_Category__c</columns>
+        <columns>Strongest_Target_Department__c</columns>
+        <columns>Est_12m_Revenue__c</columns>
+        <columns>Est_Monthly_Revenue__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Content_Target_Quarter__c</field>
+            <operation>equals</operation>
+            <value>THIS_QUARTER</value>
+        </filters>
+        <filters>
+            <field>Content_Domain_Use__c</field>
+            <operation>equals</operation>
+            <value>Personal Development/Health</value>
+        </filters>
+        <label>Targets &gt; CQ: Personal Dev</label>
+    </listViews>
+    <listViews>
+        <fullName>Targets_This_Quarter_Tech</fullName>
+        <columns>Content_Target_Quarter__c</columns>
+        <columns>Main_Course_Type__c</columns>
+        <columns>NAME</columns>
+        <columns>Content_Domain_Use__c</columns>
+        <columns>Audience_Category__c</columns>
+        <columns>Strongest_Target_Department__c</columns>
+        <columns>Est_12m_Revenue__c</columns>
+        <columns>Est_Monthly_Revenue__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Content_Target_Quarter__c</field>
+            <operation>equals</operation>
+            <value>THIS_QUARTER</value>
+        </filters>
+        <filters>
+            <field>Content_Domain_Use__c</field>
+            <operation>equals</operation>
+            <value>Tech/Computer Science</value>
+        </filters>
+        <label>Targets &gt; CQ: Tech</label>
+    </listViews>
+    <nameField>
+        <label>Target Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Content Targets</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

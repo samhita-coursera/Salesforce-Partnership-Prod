@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fields>
+        <fullName>Advance_Amount_Given__c</fullName>
+        <externalId>false</externalId>
+        <label>Advance Amount Given</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>All_CDPs_launched__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Pre-Enrollment Enabled</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Bulk_Pay_enabled__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Bulk Pay enabled?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Campaign_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Parent_Opportunity__r.Campaign.Name</formula>
+        <label>Campaign Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Confirmation_Letter_signed__c</fullName>
+        <externalId>false</externalId>
+        <label>Confirmation Letter (signed)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Course_Prices_Set__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Course Prices Set</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Course_Progression_Rate_CPR__c</fullName>
+        <externalId>false</externalId>
+        <label>Course Progression Rate (CPR)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Course_Verification_Set__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Course Verification Set</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Courses_Draft_in_S12N__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Pulled from EDW</inlineHelpText>
+        <label># Courses Draft</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Courses_Launched_in_S12N__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Pulled from EDW</inlineHelpText>
+        <label># Courses Live</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Courses_in_S12N__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Pulled from EDW</inlineHelpText>
+        <label># Courses in S12N</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Cume_Cash_Sales_Revenue__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Pulled from EDW</inlineHelpText>
+        <label>Cume Cash Sales (Revenue)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Delayed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Delayed Launch</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Difficulty__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Pulled from EDW</inlineHelpText>
+        <label>Difficulty</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Enable_pg_subs__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Enable PG &amp; Subs</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Enable_premium_grading__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Enable premium grading</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Ensure_FAQ_for_s12n_model__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Ensure FAQ for s12n model</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Expected_SDP_Launch_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Expected SDP Launch Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Locked_Capstone__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Locked Capstone?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Marketing_Questionnaire__c</fullName>
+        <externalId>false</externalId>
+        <label>Marketing Questionnaire</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Mktg_SDP_banner__c</fullName>
+        <externalId>false</externalId>
+        <label>Mktg - SDP banner</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Mktg_SDP_copy__c</fullName>
+        <externalId>false</externalId>
+        <label>Mktg - SDP copy</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>PG_enabled__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Pulled from EDW</inlineHelpText>
+        <label>PG enabled?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Parent_Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Parent Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Specializations</relationshipLabel>
+        <relationshipName>Specializations</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Partner_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>Partner ID</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PlatPlatform_Link_to_Content__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;www.coursera.org/teach-specialization/&quot; + Name</formula>
+        <label>Platform Link to Content</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Pricing_on_mobile__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Pricing on mobile</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Primary_Domain__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Pulled from EDW</inlineHelpText>
+        <label>Primary Domain</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Primary_Subdomain__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Pulled from EDW</inlineHelpText>
+        <label>Primary Subdomain</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Production_Stage__c</fullName>
+        <externalId>false</externalId>
+        <label>Production Stage</label>
+        <picklist>
+            <picklistValues>
+                <fullName>In Production</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Live &amp; In Production</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Landed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>QA_Notes__c</fullName>
+        <externalId>false</externalId>
+        <label>QA Notes</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>S12N_ID__c</fullName>
+        <caseSensitive>true</caseSensitive>
+        <externalId>true</externalId>
+        <inlineHelpText>Pulled from EDW</inlineHelpText>
+        <label>S12N ID</label>
+        <length>255</length>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>S12N_Launch_Date__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Pulled from EDW</inlineHelpText>
+        <label>S12N Launch Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>S12N_Launch_Month__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(MONTH( S12N_Launch_Date__c ), 
+1, &quot;January&quot;, 
+2, &quot;February&quot;, 
+3, &quot;March&quot;, 
+4, &quot;April&quot;, 
+5, &quot;May&quot;, 
+6, &quot;June&quot;, 
+7, &quot;July&quot;, 
+8, &quot;August&quot;, 
+9, &quot;September&quot;, 
+10, &quot;October&quot;, 
+11, &quot;November&quot;, 
+12, &quot;December&quot;, 
+&quot;None&quot;)</formula>
+        <label>S12N Launch - Month</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>S12N_Launch_Quarter__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(MONTH(  S12N_Launch_Date__c  ), 
+1, &quot;Q1&quot;, 
+2, &quot;Q1&quot;, 
+3, &quot;Q1&quot;, 
+4, &quot;Q2&quot;, 
+5, &quot;Q2&quot;, 
+6, &quot;Q2&quot;, 
+7, &quot;Q3&quot;, 
+8, &quot;Q3&quot;, 
+9, &quot;Q3&quot;, 
+10, &quot;Q4&quot;, 
+11, &quot;Q4&quot;, 
+12, &quot;Q4&quot;, 
+&quot;None&quot;)</formula>
+        <label>S12N Launch - Quarter</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>S12N_Launch_Year__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(YEAR(  S12N_Launch_Date__c  ), 
+2012, &quot;2012&quot;, 
+2013, &quot;2013&quot;, 
+2014, &quot;2014&quot;, 
+2015, &quot;2015&quot;, 
+2016, &quot;2016&quot;, 
+2017, &quot;2017&quot;, 
+2018, &quot;2018&quot;, 
+2019, &quot;2019&quot;, 
+2020, &quot;2020&quot;, 
+&quot;None&quot;)</formula>
+        <label>S12N Launch - Year</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>S12N_Name__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Pulled from EDW</inlineHelpText>
+        <label>S12N Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SDP_Copy_Approved__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>SDP Copy Approved</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Secondary_Domain__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Pulled from EDW</inlineHelpText>
+        <label>Secondary Domain</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Secondary_Subdomain__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Pulled from EDW</inlineHelpText>
+        <label>Secondary Subdomain</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sourcing_Cycle__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Parent_Opportunity__r.Launch_Cycle__c)</formula>
+        <label>Sourcing Cycle</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Subscriptions_enabled__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Subscriptions enabled?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Total_Enrollments__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Pulled from EDW</inlineHelpText>
+        <label>Total Paid Enrollments</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Specialization</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Specialization URL</label>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Specializations</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

@@ -1,0 +1,4 @@
+<apex:page standardController="Account">
+    <apex:iframe src="https://looker.dkandu.me/embed/dashboards/150?Partner%20University%20(Short%20Name)=%22{!account.Platform_Partner_Alias__c}%22"
+  width="100%" height="600px" id="account_app_usage" scrolling="true"/>    
+</apex:page>

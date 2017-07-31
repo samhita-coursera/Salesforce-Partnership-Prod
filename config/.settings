@@ -1,0 +1,24 @@
+{
+    "projectName": "Partnership - Prod",
+    "username": "samhita@coursera.org",
+    "id": "37f2cf50-6b43-11e7-8e3f-bba1b5613ca5",
+    "namespace": "",
+    "orgType": "developer",
+    "loginUrl": "https://login.salesforce.com/",
+    "instanceUrl": "https://na30.salesforce.com",
+    "workspace": "/Users/spidapartiswati/Documents",
+    "subscription": [
+        "ApexClass",
+        "ApexComponent",
+        "ApexPage",
+        "ApexTrigger",
+        "ApprovalProcess",
+        "CustomLabels",
+        "CustomMetadata",
+        "CustomObject",
+        "RemoteSiteSetting",
+        "SharingRules",
+        "StaticResource",
+        "Workflow"
+    ]
+}

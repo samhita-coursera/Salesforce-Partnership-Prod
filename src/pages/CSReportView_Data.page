@@ -1,0 +1,7 @@
+<apex:page sidebar="false" standardStylesheets="false"><div style="overflow: auto;zoom:60%;">
+  <table style="width: 300px;" cellpadding="0" cellspacing="0">
+    <apex:enhancedList listId="00B360000014ebX" height="600" customizable="false" rowsPerPage="50"/>
+
+  </table>
+</div>
+</apex:page>

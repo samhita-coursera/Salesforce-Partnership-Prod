@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Campaigns_for_TAMs</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Campaigns for TAMs</label>
+        <sharedTo>
+            <role>Technical_Account_Manager</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Partnerships</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Sharing_Rule_for_ParMas_and_T_L</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Sharing Rule for ParMas and T&amp;L</label>
+        <sharedTo>
+            <roleAndSubordinates>VP_Partnerships_T_L</roleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Partnerships</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Sharing_with_Content_Strategy_and_TAM_team</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Sharing with Content Strategy and TAM team</label>
+        <sharedTo>
+            <roleAndSubordinates>CBO</roleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Partnerships</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+</SharingRules>

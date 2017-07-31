@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ComposeGmail</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>LogCall</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>MailMerge</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>RequestUpdate</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SendEmail</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ViewAll</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Company__c</fullName>
+        <description>Company name, input from website</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Company name, input from website</inlineHelpText>
+        <label>zCompany (Deprecated)</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Inbound_lead_request__c</fullName>
+        <defaultValue>&quot;If coming from the website, the lead&apos;s inbound request will appear here. (Otherwise you&apos;ll see this filler text.)&quot;</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Original inbound lead request from the website</inlineHelpText>
+        <label>zInbound lead request (Deprecated)</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>TaskTemplateId__c</fullName>
+        <description>Lookup link to Task Template</description>
+        <externalId>true</externalId>
+        <label>Task Template Id</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <listViews>
+        <fullName>MyActivities</fullName>
+        <columns>ACTIVITY_SUBTYPE</columns>
+        <columns>TASK.STATUS</columns>
+        <columns>TASK.SUBJECT</columns>
+        <columns>TASK.DUE_DATE</columns>
+        <columns>TASK.WHAT_NAME</columns>
+        <columns>TASK.WHO_NAME</columns>
+        <columns>EVENT.LOCATION</columns>
+        <filterScope>Mine</filterScope>
+        <label>My Activities</label>
+    </listViews>
+    <listViews>
+        <fullName>MyDelegatedActivities</fullName>
+        <filterScope>Delegated</filterScope>
+        <label>My Delegated Activities</label>
+    </listViews>
+    <listViews>
+        <fullName>MyTeamsActivities</fullName>
+        <filterScope>Team</filterScope>
+        <label>My Team&apos;s Activities</label>
+    </listViews>
+    <listViews>
+        <fullName>TodaysTasks</fullName>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>TASK.CLOSED</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>ACTIVITY.TASK</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>TASK.DUE_DATE</field>
+            <operation>lessThan</operation>
+            <value>TOMORROW</value>
+        </filters>
+        <label>Today&apos;s Tasks</label>
+    </listViews>
+    <listViews>
+        <fullName>UpcomingEvents</fullName>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>ACTIVITY.TASK</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>TASK.DUE_DATE</field>
+            <operation>greaterThan</operation>
+            <value>YESTERDAY</value>
+        </filters>
+        <label>Upcoming Events</label>
+    </listViews>
+    <listViews>
+        <fullName>ezwf__MyDelegatedActivities</fullName>
+        <columns>TASK.SUBJECT</columns>
+        <columns>TASK.WHO_NAME</columns>
+        <columns>TASK.DUE_DATE</columns>
+        <columns>TASK.CREATED_DATE</columns>
+        <columns>CORE.USERS.FULL_NAME</columns>
+        <columns>CREATEDBY_USER.ALIAS</columns>
+        <columns>TASK.PRIORITY</columns>
+        <columns>TASK.STATUS</columns>
+        <columns>TASK.TYPE</columns>
+        <filterScope>Delegated</filterScope>
+        <label>My Delegated Activities</label>
+    </listViews>
+    <listViews>
+        <fullName>ezwf__MyOpenActivities</fullName>
+        <columns>TASK.SUBJECT</columns>
+        <columns>TASK.WHO_NAME</columns>
+        <columns>TASK.DUE_DATE</columns>
+        <columns>TASK.CREATED_DATE</columns>
+        <columns>CORE.USERS.FULL_NAME</columns>
+        <columns>CREATEDBY_USER.ALIAS</columns>
+        <columns>TASK.PRIORITY</columns>
+        <columns>TASK.STATUS</columns>
+        <columns>TASK.TYPE</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>TASK.STATUS</field>
+            <operation>notEqual</operation>
+            <value>Completed</value>
+        </filters>
+        <label>My Open Activities</label>
+    </listViews>
+    <searchLayouts>
+        <searchResultsAdditionalFields>TASK.SUBJECT</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>TASK.WHO_NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>TASK.WHAT_NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>TASK.DUE_DATE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CORE.USERS.ALIAS</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Private</sharingModel>
+</CustomObject>
