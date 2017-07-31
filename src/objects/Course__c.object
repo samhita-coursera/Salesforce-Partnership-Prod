@@ -532,19 +532,13 @@
         <label>Parent Opportunity</label>
         <lookupFilter>
             <active>true</active>
-            <booleanFilter>(1 AND 2)</booleanFilter>
             <filterItems>
-                <field>Opportunity.Account.Id</field>
+                <field>$Source.First_Partner_for_Course__c</field>
                 <operation>equals</operation>
-                <valueField>$Source.First_Partner_for_Course__c</valueField>
-            </filterItems>
-            <filterItems>
-                <field>Opportunity.StageName</field>
-                <operation>equals</operation>
-                <value>Closed / Won</value>
+                <valueField>Opportunity.AccountId</valueField>
             </filterItems>
             <infoMessage>Select one of the Closed/won opportunity</infoMessage>
-            <isOptional>true</isOptional>
+            <isOptional>false</isOptional>
         </lookupFilter>
         <referenceTo>Opportunity</referenceTo>
         <relationshipLabel>Courses</relationshipLabel>
@@ -1176,12 +1170,12 @@
         <filters>
             <field>Beta_Test_Monday_Start_Date__c</field>
             <operation>greaterOrEqual</operation>
-            <value>7/1/2017</value>
+            <value>7/17/2017</value>
         </filters>
         <filters>
             <field>Beta_Test_Monday_Start_Date__c</field>
             <operation>lessOrEqual</operation>
-            <value>7/10/2017</value>
+            <value>7/25/2017</value>
         </filters>
         <label>NEW Beta Testing View - 2017</label>
     </listViews>

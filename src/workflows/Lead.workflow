@@ -199,20 +199,6 @@
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
     <rules>
-        <fullName>Update Lead Status</fullName>
-        <actions>
-            <name>Update_lead_status</name>
-            <type>FieldUpdate</type>
-        </actions>
-        <active>true</active>
-        <criteriaItems>
-            <field>Lead.ezwf__Easy_Workflow__c</field>
-            <operation>contains</operation>
-            <value>Reachout: new lead from website</value>
-        </criteriaItems>
-        <triggerType>onCreateOrTriggeringUpdate</triggerType>
-    </rules>
-    <rules>
         <fullName>Update Non-profit Checkbox</fullName>
         <actions>
             <name>Check_Nonprofit_Box</name>

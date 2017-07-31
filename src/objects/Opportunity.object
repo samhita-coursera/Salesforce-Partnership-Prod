@@ -45,15 +45,6 @@
         <type>Default</type>
     </actionOverrides>
     <businessProcesses>
-        <fullName>B2B</fullName>
-        <description>This is the sales process for B2B</description>
-        <isActive>false</isActive>
-        <values>
-            <fullName>New</fullName>
-            <default>false</default>
-        </values>
-    </businessProcesses>
-    <businessProcesses>
         <fullName>Degree Sourcing</fullName>
         <description>This is the sales process for sourcing degrees</description>
         <isActive>true</isActive>
@@ -82,7 +73,7 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Pitched%2FQualifying</fullName>
+            <fullName>Qualification</fullName>
             <default>false</default>
         </values>
         <values>
@@ -91,47 +82,6 @@
         </values>
         <values>
             <fullName>Term Sheet Development</fullName>
-            <default>false</default>
-        </values>
-    </businessProcesses>
-    <businessProcesses>
-        <fullName>Degree Users</fullName>
-        <description>Process to follow for Degree Users</description>
-        <isActive>true</isActive>
-        <values>
-            <fullName>Aspirational</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Closed %2F Lost or Dormant</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Closed %2F Won</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Closed Lost</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Contract Creation</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>On Hold</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Proposal Development</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Proposal Submission</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Target Identified</fullName>
             <default>false</default>
         </values>
     </businessProcesses>
@@ -169,64 +119,35 @@
         </values>
     </businessProcesses>
     <businessProcesses>
-        <fullName>Learner</fullName>
-        <description>Premium learners individual payers</description>
-        <isActive>true</isActive>
-        <values>
-            <fullName>Commitment</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Interest%2FDevelopment</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>New</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Verbal Commit</fullName>
-            <default>false</default>
-        </values>
-    </businessProcesses>
-    <businessProcesses>
         <fullName>University Core</fullName>
         <description>This is the sales process for ParMas to source courses and Specializations</description>
         <isActive>true</isActive>
-        <values>
-            <fullName>Closed %2F Lost or Dormant</fullName>
-            <default>false</default>
-        </values>
         <values>
             <fullName>Closed %2F Won</fullName>
             <default>false</default>
         </values>
         <values>
+            <fullName>Closed Lost</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Commitment</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Development</fullName>
+            <fullName>Interest Development</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Interest%2FDevelopment</fullName>
+            <fullName>Qualification</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Partner Qualification</fullName>
+            <fullName>RFP Review and Approval</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Pitched%2FQualifying</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Proposal Approval %26 Confirmation</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Proposal Submission</fullName>
+            <fullName>RFP Submission</fullName>
             <default>false</default>
         </values>
         <values>
@@ -234,7 +155,7 @@
             <default>false</default>
         </values>
     </businessProcesses>
-    <compactLayoutAssignment>New_Awesome_Companct_Layout</compactLayoutAssignment>
+    <compactLayoutAssignment>New_Industry_Partner_Compact_Layout</compactLayoutAssignment>
     <compactLayouts>
         <fullName>New_Awesome_Companct_Layout</fullName>
         <fields>Name</fields>
@@ -243,6 +164,26 @@
         <fields>Amount</fields>
         <fields>OwnerId</fields>
         <label>New Awesome Compact Layout</label>
+    </compactLayouts>
+    <compactLayouts>
+        <fullName>New_Industry_Partner_Compact_Layout</fullName>
+        <fields>Name</fields>
+        <fields>AccountId</fields>
+        <fields>StageName</fields>
+        <fields>Lead_Type__c</fields>
+        <fields>OwnerId</fields>
+        <fields>RecordTypeId</fields>
+        <label>New Industry Partner Compact Layout</label>
+    </compactLayouts>
+    <compactLayouts>
+        <fullName>University_Partner_Compact_Layout</fullName>
+        <fields>Name</fields>
+        <fields>AccountId</fields>
+        <fields>StageName</fields>
+        <fields>Lead_Type__c</fields>
+        <fields>OwnerId</fields>
+        <fields>CampaignId</fields>
+        <label>University Partner Compact Layout</label>
     </compactLayouts>
     <enableEnhancedLookup>true</enableEnhancedLookup>
     <enableFeeds>true</enableFeeds>
@@ -274,7 +215,7 @@
         <description>Confirms whether AM has been introduced</description>
         <externalId>false</externalId>
         <inlineHelpText>Confirms whether AM has been introduced</inlineHelpText>
-        <label>AM Introduced</label>
+        <label>Outdated AM Introduced</label>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Checkbox</type>
@@ -299,7 +240,7 @@
         <fullName>Account_Model__c</fullName>
         <description>Account Model for B2B Opportunities</description>
         <externalId>false</externalId>
-        <label>Account Model</label>
+        <label>Outdated Account Model</label>
         <picklist>
             <picklistValues>
                 <fullName>Decentralized Local</fullName>
@@ -340,7 +281,7 @@
         <description>Allowing account plans to be linked to opportunities</description>
         <externalId>false</externalId>
         <inlineHelpText>URL for Account Plan</inlineHelpText>
-        <label>Account Plan</label>
+        <label>Outdated Account Plan</label>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
@@ -350,7 +291,7 @@
         <fullName>Actual_Launch_Date__c</fullName>
         <externalId>false</externalId>
         <inlineHelpText>Actual launch date on platform (populated automatically when live on Coursera)</inlineHelpText>
-        <label>Actual Launch Date</label>
+        <label>Outdated Actual Launch Date</label>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
@@ -361,7 +302,7 @@
         <description>Actual target all-time revenue on platform (populated automatically when live on Coursera; linked to DWH)</description>
         <externalId>false</externalId>
         <inlineHelpText>Actual target all-time revenue on platform (populated automatically when live on Coursera; linked to DWH)</inlineHelpText>
-        <label>All-time post-launch revenue</label>
+        <label>Outdated All-time post-launch revenue</label>
         <precision>18</precision>
         <required>false</required>
         <scale>0</scale>
@@ -373,7 +314,7 @@
         <fullName>Additional_Considerations_Concerns__c</fullName>
         <description>Additional Considerations/Concerns B2B Opportunities</description>
         <externalId>false</externalId>
-        <label>Additional Considerations/Concerns</label>
+        <label>OdatedAdditional Considerations/Concerns</label>
         <length>255</length>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
@@ -420,7 +361,7 @@
         <description>Actual target all-time enrollees on platform (populated automatically when live on Coursera; linked to DWH)</description>
         <externalId>false</externalId>
         <inlineHelpText>Actual target all-time enrollees on platform (populated automatically when live on Coursera; linked to DWH)</inlineHelpText>
-        <label>All-time post-launch enrollees</label>
+        <label>Outdated All-time post-launch enrollees</label>
         <precision>18</precision>
         <required>false</required>
         <scale>0</scale>
@@ -437,6 +378,18 @@
         <trackTrending>true</trackTrending>
     </fields>
     <fields>
+        <fullName>Amount_granted_in_advance__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Advance amount granted</inlineHelpText>
+        <label>Amount granted in advance</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
         <fullName>Annualized_Amount_USD_Unweighted__c</fullName>
         <description>ARR - unweighted and hidden</description>
         <externalId>false</externalId>
@@ -445,7 +398,7 @@
 Amount/(Contract_Months_Calculated__c/12))</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <inlineHelpText>ARR - unweighted and hidden</inlineHelpText>
-        <label>Annualized Amount (USD) Unweighted</label>
+        <label>OdatedAnnualized Amount (USD) Unweighted</label>
         <precision>18</precision>
         <required>false</required>
         <scale>0</scale>
@@ -460,7 +413,7 @@ Amount/(Contract_Months_Calculated__c/12))</formula>
 ExpectedRevenue/(Contract_Months_Calculated__c/12))</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <inlineHelpText>B2B: ARR for a given deal</inlineHelpText>
-        <label>Annualized Amount (USD)</label>
+        <label>Outdated Annualized Amount (USD)</label>
         <precision>18</precision>
         <required>false</required>
         <scale>0</scale>
@@ -470,7 +423,7 @@ ExpectedRevenue/(Contract_Months_Calculated__c/12))</formula>
     <fields>
         <fullName>Approval_Process__c</fullName>
         <externalId>false</externalId>
-        <label>Approval Process</label>
+        <label>Outdated Approval Process</label>
         <picklist>
             <picklistValues>
                 <fullName>RFP</fullName>
@@ -492,7 +445,7 @@ ExpectedRevenue/(Contract_Months_Calculated__c/12))</formula>
         <fullName>Approval_Stage__c</fullName>
         <externalId>false</externalId>
         <inlineHelpText>to be edited/confirmed by T&amp;L/CSM/Pauline</inlineHelpText>
-        <label>Approval Stage</label>
+        <label>Outdated Approval Stage</label>
         <picklist>
             <picklistValues>
                 <fullName>In Review</fullName>
@@ -530,7 +483,7 @@ ExpectedRevenue/(Contract_Months_Calculated__c/12))</formula>
         <fullName>B2B_Account_Vertical__c</fullName>
         <externalId>false</externalId>
         <inlineHelpText>References the account page</inlineHelpText>
-        <label>B2B Account Vertical</label>
+        <label>Outdated B2B Account Vertical</label>
         <picklist>
             <picklistValues>
                 <fullName>Corporate</fullName>
@@ -567,7 +520,7 @@ ExpectedRevenue/(Contract_Months_Calculated__c/12))</formula>
         <fullName>Budget_Confirmed__c</fullName>
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
-        <label>Budget Confirmed</label>
+        <label>Outdated Budget Confirmed</label>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Checkbox</type>
@@ -597,17 +550,50 @@ ExpectedRevenue/(Contract_Months_Calculated__c/12))</formula>
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>CSM_VM_First_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>CSM_VM_for_Content_Approval__r.FirstName</formula>
+        <label>CSM VM First Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CSM_VM_for_Content_Approval__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>Vertical Manager (CSM) assigned to review and approve content of the RFP</inlineHelpText>
+        <label>CSM VM for Content Approval</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>OpportunitiesToReview</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>CampaignId</fullName>
         <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
+        <trackHistory>true</trackHistory>
         <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Campaign_Vertical__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Campaign.Vertical__c)</formula>
+        <label>Campaign Vertical</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>Campaign__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>
         <inlineHelpText>What campaign does this opp match to?</inlineHelpText>
-        <label>Campaign</label>
+        <label>Outdated Campaign</label>
         <referenceTo>Campaign</referenceTo>
         <relationshipLabel>Opportunities (Campaign)</relationshipLabel>
         <relationshipName>Opportunities2</relationshipName>
@@ -623,7 +609,7 @@ ExpectedRevenue/(Contract_Months_Calculated__c/12))</formula>
         <inlineHelpText>Locked Capstone = Legacy Model where Learners only enroll once they completed previous
 Unlocked Cumulative Project = New Model with standalone PBC that anyone can enroll in
 No Standalone Project-Base Course = New Model i.e. distributed project</inlineHelpText>
-        <label>Capstone Model</label>
+        <label>Outdated Capstone Model</label>
         <picklist>
             <picklistValues>
                 <fullName>Locked Capstone</fullName>
@@ -650,7 +636,7 @@ No Standalone Project-Base Course = New Model i.e. distributed project</inlineHe
         <description>This field allows TAMs to capture status of discussion with Partner, in the hopes to transition them away from the old model of Capstones</description>
         <externalId>false</externalId>
         <inlineHelpText>Please provide an update on the progress of discussion around Capstones - When are they going to switch to the new model? Which model are they going to choose? What modifications are Partners going to make? What are blockers?</inlineHelpText>
-        <label>Capstone Transition Plan</label>
+        <label>Outdated Capstone Transition Plan</label>
         <length>32768</length>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
@@ -993,9 +979,9 @@ AND(MONTH(TODAY())&gt;=10,MONTH(CloseDate)&lt;10))</formula>
     </fields>
     <fields>
         <fullName>Content_Type_PCKLST__c</fullName>
-        <description>Content Type on Content Opportunity . Not a value from Campaign- Created for Industry Partner</description>
+        <description>Content Type on Content Opportunity. If available, value auto populated from campaign</description>
         <externalId>false</externalId>
-        <inlineHelpText>Content Type</inlineHelpText>
+        <inlineHelpText>Content Type for opportunity. If available, value auto populated from campaign</inlineHelpText>
         <label>Content Type</label>
         <picklist>
             <picklistValues>
@@ -1028,7 +1014,7 @@ AND(MONTH(TODAY())&gt;=10,MONTH(CloseDate)&lt;10))</formula>
         <formula>TEXT( Campaign.Content_Type__c )</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <inlineHelpText>Pulled from Content Type on Campaign</inlineHelpText>
-        <label>Content Type</label>
+        <label>Campaign: Content Type</label>
         <required>false</required>
         <trackHistory>false</trackHistory>
         <type>Text</type>
@@ -1386,7 +1372,67 @@ AND(MONTH(TODAY())&gt;=10,MONTH(CloseDate)&lt;10))</formula>
         <fullName>Currently_in_production__c</fullName>
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
-        <label>Currently in production</label>
+        <label>Currently busy in another production</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>DM_1_committed_for_content_creation__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>First line of decision maker (POC) said yes (orally or via e-mail) to content creation</inlineHelpText>
+        <label>DM-1 committed for content creation?</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>DM_1_understood_campaign__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>First line decision maker (POC/Dean/Instructor) understood the overall sourcing process (incentives, constraints,...)</inlineHelpText>
+        <label>DM-1 understood campaign?</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>DM_2_committed_for_content_creation__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Mark true if 2nd line decision maker (Instructor) has said yes (orally or via e-mail) for content creation</inlineHelpText>
+        <label>DM-2 committed for content creation?</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>DM_2_received_campaign_docs__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Mark true if 2nd line decision maker (e.g. instructor) has received documentation about sourcing campaign</inlineHelpText>
+        <label>DM-2 received campaign docs?</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>DM_2_understood_campaign__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Mark true if 2nd line decision maker (e.g. instructor) has understood the sourcing campaign process (incentives and constraints)</inlineHelpText>
+        <label>DM-2 understood campaign?</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>DM_2_understood_opportunity__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Mark true if 2nd line decision maker (e.g. instructor) understood the potential of the opportunity (meaning: we answered his questions around enrollment, revenue, market size, target audience,....as much as we can)</inlineHelpText>
+        <label>DM-2 understood opportunity?</label>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Checkbox</type>
@@ -1396,7 +1442,7 @@ AND(MONTH(TODAY())&gt;=10,MONTH(CloseDate)&lt;10))</formula>
         <description>Daily avg revenue on platform (populated automatically when live on Coursera; linked to DWH)</description>
         <externalId>false</externalId>
         <inlineHelpText>Daily avg revenue on platform (populated automatically when live on Coursera; linked to DWH)</inlineHelpText>
-        <label>Avg. daily post-launch revenue</label>
+        <label>Outdated Avg. daily post-launch revenue</label>
         <precision>18</precision>
         <required>false</required>
         <scale>0</scale>
@@ -1466,7 +1512,7 @@ AND(MONTH(TODAY())&gt;=10,MONTH(CloseDate)&lt;10))</formula>
         <description>Automatically selected if discount within volume bands; also automatically selected if over volume bands but approved via approval process</description>
         <externalId>false</externalId>
         <inlineHelpText>Automatically selected if discount within volume bands; also automatically selected if over volume bands but approved via approval process</inlineHelpText>
-        <label>Discount Approved</label>
+        <label>Outdated Discount Approved</label>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Checkbox</type>
@@ -1612,6 +1658,16 @@ AND(MONTH(TODAY())&gt;=10,MONTH(CloseDate)&lt;10))</formula>
         <type>Picklist</type>
     </fields>
     <fields>
+        <fullName>Faculty_members_identified__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>First line decision maker has identified potential faculty member(s)/ has validated the faculty members we suggested</inlineHelpText>
+        <label>Faculty members identified?</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>First_Day_CFQ__c</fullName>
         <description>First day of the current Close Date on the opportunity</description>
         <externalId>false</externalId>
@@ -1708,7 +1764,7 @@ today()-day(today())-30-31+1))))))))))))</defaultValue>
         <fullName>Has_Pricing_Products__c</fullName>
         <externalId>false</externalId>
         <inlineHelpText>Checked if the deal has pricing and products</inlineHelpText>
-        <label># Line Items</label>
+        <label>Outdated # Line Items</label>
         <summaryForeignKey>OpportunityLineItem.OpportunityId</summaryForeignKey>
         <summaryOperation>count</summaryOperation>
         <trackHistory>false</trackHistory>
@@ -1759,9 +1815,69 @@ today()-day(today())-30-31+1))))))))))))</defaultValue>
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>Intro_call_completed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Check this box if discussions about the wish list has happened (call or visit)</inlineHelpText>
+        <label>Intro call completed?</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>IsPrivate</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Is_Batched_Sourcing__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Mark this true if wishlist is being sourced in batches for pre identified target partners and not open to all</inlineHelpText>
+        <label>Is Batched Sourcing?</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Is_RFP_Approved_by_T_L__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Mark true if associated T&amp;L person has reviewed the proposal, answered all open questions and has made a decision to approve</inlineHelpText>
+        <label>Is RFP Approved by T&amp;L?</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Is_RFP_Approved_by_VM__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Mark True if VM has reviewed the proposal and answered all open questions and has made a decision to approve</inlineHelpText>
+        <label>Is RFP Approved by VM?</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Is_RFP_submitted_by_partner__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Mark this true if the proposal has been received from partner and it has been uploaded to Salesforce Opportunity.</inlineHelpText>
+        <label>Is RFP submitted by partner?</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Is_approved_by_E_Staff__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Is E-staff approval received from this RFP?</inlineHelpText>
+        <label>Is approved by E-Staff?</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>Is_there_SLA_Language__c</fullName>
@@ -1783,6 +1899,15 @@ today()-day(today())-30-31+1))))))))))))</defaultValue>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Just_To_Update__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Just To Update</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>Lack_of_production_resources__c</fullName>
@@ -2072,12 +2197,43 @@ today()-day(today())-30-31+1))))))))))))</defaultValue>
         <description>Sums the # of licenses listed among products</description>
         <externalId>false</externalId>
         <inlineHelpText>Sums the # of licenses listed among products</inlineHelpText>
-        <label># Licenses</label>
+        <label>Outdated # Licenses</label>
         <summarizedField>OpportunityLineItem.Quantity</summarizedField>
         <summaryForeignKey>OpportunityLineItem.OpportunityId</summaryForeignKey>
         <summaryOperation>sum</summaryOperation>
         <trackHistory>false</trackHistory>
         <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Link_to_RFP_submitted_by_partner__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This is not a approved RFP. It is RFP submitted by partner.</inlineHelpText>
+        <label>Link to RFP submitted by partner</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Link_to_Signed_Confirmation_Document__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>link to final signed confirmation document</inlineHelpText>
+        <label>Link to Signed Confirmation Document</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>List_of_Production_Resources__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>List of resources identified by Instructor for production</inlineHelpText>
+        <label>List of Production Resources</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
     </fields>
     <fields>
         <fullName>Loss_Reason__c</fullName>
@@ -2359,6 +2515,16 @@ today()-day(today())-30-31+1))))))))))))</defaultValue>
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>POC_DM_1_understood_opportunity__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Mark true if POC (and further decision makers) understood the potential of the opportunity (meaning: we answered his questions around enrollment, revenue,....as much as we can)</inlineHelpText>
+        <label>POC/DM- 1 understood opportunity?</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>Parent_Campaign__c</fullName>
         <externalId>false</externalId>
         <formula>Campaign.Parent.Name</formula>
@@ -2500,10 +2666,10 @@ today()-day(today())-30-31+1))))))))))))</defaultValue>
         <trackTrending>true</trackTrending>
     </fields>
     <fields>
-        <fullName>Production_Owner__c</fullName>
+        <fullName>Production_Owner_Old__c</fullName>
         <externalId>false</externalId>
         <inlineHelpText>Who owns the launch of this content?</inlineHelpText>
-        <label>Production Owner</label>
+        <label>Production Owner_Old</label>
         <picklist>
             <picklistValues>
                 <fullName>Peter Barna</fullName>
@@ -2548,6 +2714,30 @@ today()-day(today())-30-31+1))))))))))))</defaultValue>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Production_Owner__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>TAM Or Production Owner for the opportunity</inlineHelpText>
+        <label>Production Owner</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Production_Opportunities</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Production_Owner_from_Account__c</fullName>
+        <externalId>false</externalId>
+        <formula>Account.Technical_Account_Manager__c</formula>
+        <inlineHelpText>Production Owner(/TAM) responsible for the related account</inlineHelpText>
+        <label>Production Owner from Account</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>Proposal_Evaluation_Link__c</fullName>
@@ -2608,6 +2798,16 @@ today()-day(today())-30-31+1))))))))))))</defaultValue>
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>Ready_to_contact_DM_2__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>First line decision maker has provided approval for contacting the 2nd line decision maker or has committed to contact the 2nd line decision maker.</inlineHelpText>
+        <label>Ready to contact DM-2?</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>Reason_for_Rejection__c</fullName>
         <externalId>false</externalId>
         <label>Reason for Rejection</label>
@@ -2617,6 +2817,17 @@ today()-day(today())-30-31+1))))))))))))</defaultValue>
         <trackHistory>false</trackHistory>
         <type>Text</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Reasoning_for_potential_target_partner__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Please fill in the reason supporting your decision to target this partner for this content topic</inlineHelpText>
+        <label>Reasoning for potential target partner</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
     </fields>
     <fields>
         <fullName>Record_Type_Oppty_Hidden__c</fullName>
@@ -2737,6 +2948,16 @@ today()-day(today())-30-31+1))))))))))))</defaultValue>
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Resources_identified_by_Instructor__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Mark true if Instructor knows which production resources he will be using</inlineHelpText>
+        <label>Resources identified by Instructor</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>S12N_Course_ID__c</fullName>
         <externalId>false</externalId>
         <label>S12N/Course ID</label>
@@ -2768,6 +2989,36 @@ today()-day(today())-30-31+1))))))))))))</defaultValue>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Salsesforce_Id__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASESAFEID(Id)</formula>
+        <label>Salsesforce Id</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sent_RFP_doc_to_Partner__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Mark true if Instructor and POC have received RFP documentation and detailed next steps</inlineHelpText>
+        <label>Sent RFP doc to Partner?</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Sent_collaterals_scheduled_intro_call__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>sent collaterals about the initiative to entry point of contact and asked time for introduction call</inlineHelpText>
+        <label>Sent collaterals &amp; scheduled intro call?</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>Sept_Challenge__c</fullName>
@@ -2807,6 +3058,16 @@ today()-day(today())-30-31+1))))))))))))</defaultValue>
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>Sourcing_Review_Deadline__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>After this date, an email will be sent to ParMa asking them to close this opportunity.</inlineHelpText>
+        <label>Sourcing Review Deadline</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
         <fullName>StageName</fullName>
         <inlineHelpText>Stage of pipeline that the target is currently in.</inlineHelpText>
         <picklist>
@@ -2835,17 +3096,7 @@ today()-day(today())-30-31+1))))))))))))</defaultValue>
                 <description>You&apos;ve identified the target, but haven&apos;t yet pitched it.</description>
                 <closed>false</closed>
                 <forecastCategory>Pipeline</forecastCategory>
-                <probability>20</probability>
-                <won>false</won>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Pitched/Qualifying</fullName>
-                <color>#641CCF</color>
-                <default>false</default>
-                <description>You&apos;ve made an initial pitch and the opportunity is qualified to move forward. However, you don&apos;t have full confidence on whether or not the partner is committed to proceeding.</description>
-                <closed>false</closed>
-                <forecastCategory>Pipeline</forecastCategory>
-                <probability>10</probability>
+                <probability>5</probability>
                 <won>false</won>
             </picklistValues>
             <picklistValues>
@@ -2861,12 +3112,11 @@ today()-day(today())-30-31+1))))))))))))</defaultValue>
                 <won>false</won>
             </picklistValues>
             <picklistValues>
-                <fullName>Interest/Development</fullName>
-                <color>#F96FB7</color>
+                <fullName>Interest Development</fullName>
                 <default>false</default>
                 <closed>false</closed>
                 <forecastCategory>Pipeline</forecastCategory>
-                <probability>25</probability>
+                <probability>40</probability>
                 <won>false</won>
             </picklistValues>
             <picklistValues>
@@ -2875,16 +3125,6 @@ today()-day(today())-30-31+1))))))))))))</defaultValue>
                 <closed>false</closed>
                 <forecastCategory>Pipeline</forecastCategory>
                 <probability>25</probability>
-                <won>false</won>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Commitment</fullName>
-                <color>#2F5D85</color>
-                <default>false</default>
-                <description>The partner has verbally committed to making a proposal, but hasn&apos;t yet submitted anything yet.</description>
-                <closed>false</closed>
-                <forecastCategory>Pipeline</forecastCategory>
-                <probability>75</probability>
                 <won>false</won>
             </picklistValues>
             <picklistValues>
@@ -2912,19 +3152,29 @@ today()-day(today())-30-31+1))))))))))))</defaultValue>
                 <won>false</won>
             </picklistValues>
             <picklistValues>
-                <fullName>On Hold</fullName>
+                <fullName>Commitment</fullName>
+                <color>#2F5D85</color>
+                <default>false</default>
+                <description>The partner has verbally committed to making a proposal, but hasn&apos;t yet submitted anything yet.</description>
+                <closed>false</closed>
+                <forecastCategory>Pipeline</forecastCategory>
+                <probability>60</probability>
+                <won>false</won>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RFP Submission</fullName>
+                <default>false</default>
+                <closed>false</closed>
+                <forecastCategory>Pipeline</forecastCategory>
+                <probability>65</probability>
+                <won>false</won>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RFP Review and Approval</fullName>
                 <default>false</default>
                 <closed>false</closed>
                 <forecastCategory>Pipeline</forecastCategory>
                 <probability>75</probability>
-                <won>false</won>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Contract Creation</fullName>
-                <default>false</default>
-                <closed>false</closed>
-                <forecastCategory>Pipeline</forecastCategory>
-                <probability>80</probability>
                 <won>false</won>
             </picklistValues>
             <picklistValues>
@@ -2937,6 +3187,14 @@ today()-day(today())-30-31+1))))))))))))</defaultValue>
                 <won>false</won>
             </picklistValues>
             <picklistValues>
+                <fullName>On Hold</fullName>
+                <default>false</default>
+                <closed>false</closed>
+                <forecastCategory>Pipeline</forecastCategory>
+                <probability>75</probability>
+                <won>false</won>
+            </picklistValues>
+            <picklistValues>
                 <fullName>Verbal Commit</fullName>
                 <color>#F3D904</color>
                 <default>false</default>
@@ -2944,6 +3202,14 @@ today()-day(today())-30-31+1))))))))))))</defaultValue>
                 <closed>false</closed>
                 <forecastCategory>Pipeline</forecastCategory>
                 <probability>90</probability>
+                <won>false</won>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Contract Creation</fullName>
+                <default>false</default>
+                <closed>false</closed>
+                <forecastCategory>Pipeline</forecastCategory>
+                <probability>80</probability>
                 <won>false</won>
             </picklistValues>
             <picklistValues>
@@ -2972,30 +3238,6 @@ today()-day(today())-30-31+1))))))))))))</defaultValue>
                 <closed>true</closed>
                 <forecastCategory>Omitted</forecastCategory>
                 <probability>0</probability>
-                <won>false</won>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Partner Qualification</fullName>
-                <default>false</default>
-                <closed>false</closed>
-                <forecastCategory>Pipeline</forecastCategory>
-                <probability>40</probability>
-                <won>false</won>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Development</fullName>
-                <default>false</default>
-                <closed>false</closed>
-                <forecastCategory>Pipeline</forecastCategory>
-                <probability>60</probability>
-                <won>false</won>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Proposal Approval &amp; Confirmation</fullName>
-                <default>false</default>
-                <closed>false</closed>
-                <forecastCategory>Pipeline</forecastCategory>
-                <probability>85</probability>
                 <won>false</won>
             </picklistValues>
             <sorted>false</sorted>
@@ -3089,6 +3331,16 @@ today()-day(today())-30-31+1))))))))))))</defaultValue>
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>TAM_uploaded_signed_confirmation_letter__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Mark true if TAM(Production Owner) has uploaded signed Contract Confirmation Letter to salesforce-opportunity</inlineHelpText>
+        <label>TAM uploaded signed confirmation letter?</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>T_L_Associate__c</fullName>
         <externalId>false</externalId>
         <inlineHelpText>The T&amp;L member giving feedback on this course/s12n</inlineHelpText>
@@ -3141,6 +3393,17 @@ today()-day(today())-30-31+1))))))))))))</defaultValue>
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>T_L_RFP_Approval_Reason__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>T&amp;L person to enter point-wise reasons supporting the decision to approve the RFP</inlineHelpText>
+        <label>T&amp;L RFP Approval Reason</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
         <fullName>T_L_Score__c</fullName>
         <externalId>false</externalId>
         <label>T&amp;L Score</label>
@@ -3151,6 +3414,29 @@ today()-day(today())-30-31+1))))))))))))</defaultValue>
         <trackHistory>false</trackHistory>
         <type>Number</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>T_L_Specialist_FIrst_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>T_L_Specialist_for_Pedagogy_Approval__r.FirstName</formula>
+        <label>T&amp;L Specialist First Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>T_L_Specialist_for_Pedagogy_Approval__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>T&amp;L Specialist for Pedagogy Approval on RFP</inlineHelpText>
+        <label>T&amp;L Specialist for Pedagogy Approval</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Opportunities1ForPedagogyApprove</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>Targeted_Launch_Date__c</fullName>
@@ -3167,7 +3453,7 @@ today()-day(today())-30-31+1))))))))))))</defaultValue>
         <fullName>Targeted_sourcing_batch_number__c</fullName>
         <externalId>false</externalId>
         <inlineHelpText>The batch number in case of target sourcing process</inlineHelpText>
-        <label>Targeted sourcing batch number</label>
+        <label>Targeted sourcing: Batch number</label>
         <picklist>
             <picklistValues>
                 <fullName>Batch 1</fullName>
@@ -3355,15 +3641,35 @@ if(year( CloseDate )=year( TODAY() ),&quot;Remainder of This Year&quot;,&quot;Ot
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>VM_RFP_Approval_Reason__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>VMs to enter point-wise reasons supporting the decision of RFP approval.</inlineHelpText>
+        <label>VM RFP Approval Reason</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>VM_clarified_content_scope_to_partner__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Mark true if call with point of contact happened involving VM to make topics and high-level course requirements clear.</inlineHelpText>
+        <label>VM clarified content scope? (OPTIONAL)</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>Vertical__c</fullName>
         <externalId>false</externalId>
-        <formula>TEXT(Campaign.Vertical__c)</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <globalPicklist>Vertical</globalPicklist>
         <label>Vertical</label>
         <required>false</required>
-        <trackHistory>false</trackHistory>
-        <type>Text</type>
-        <unique>false</unique>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
     </fields>
     <fields>
         <fullName>Vertical_v2__c</fullName>
@@ -3439,17 +3745,37 @@ if(year( CloseDate )=year( TODAY() ),&quot;Remainder of This Year&quot;,&quot;Ot
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>ezwf__Easy_Workflow__c</fullName>
-        <defaultValue>&quot;n3w&quot;</defaultValue>
-        <deprecated>false</deprecated>
-        <description>Populated with completed tasks to enhance workflow.</description>
+        <fullName>Wishlist_Type__c</fullName>
         <externalId>false</externalId>
-        <label>Task Completed</label>
-        <length>50000</length>
+        <formula>TEXT(Campaign.Wishlist_Type__c)</formula>
+        <inlineHelpText>Wishlist type related to campaign</inlineHelpText>
+        <label>Wishlist Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Workflow_Check__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Workflow Check</label>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
-        <type>LongTextArea</type>
-        <visibleLines>3</visibleLines>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Workflow_Order__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Workflow Order</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>related_campaign__c</fullName>
@@ -3510,6 +3836,7 @@ if(year( CloseDate )=year( TODAY() ),&quot;Remainder of This Year&quot;,&quot;Ot
         <columns>OPPORTUNITY.CLOSE_DATE</columns>
         <columns>OPPORTUNITY.STAGE_NAME</columns>
         <columns>CORE.USERS.ALIAS</columns>
+        <columns>Production_Owner__c</columns>
         <filterScope>Everything</filterScope>
         <filters>
             <field>Owner_Role__c</field>
@@ -3909,7 +4236,7 @@ if(year( CloseDate )=year( TODAY() ),&quot;Remainder of This Year&quot;,&quot;Ot
         <columns>OPPORTUNITY.STAGE_NAME</columns>
         <columns>CORE.USERS.ALIAS</columns>
         <columns>Content_Type__c</columns>
-        <columns>Vertical__c</columns>
+        <columns>Campaign_Vertical__c</columns>
         <columns>Career_Path__c</columns>
         <filterScope>Everything</filterScope>
         <filters>
@@ -4657,7 +4984,7 @@ if(year( CloseDate )=year( TODAY() ),&quot;Remainder of This Year&quot;,&quot;Ot
         <columns>OPPORTUNITY.NAME</columns>
         <columns>Main_Course_Type__c</columns>
         <columns>ACCOUNT.NAME</columns>
-        <columns>Production_Owner__c</columns>
+        <columns>Production_Owner_Old__c</columns>
         <columns>CORE.USERS.FULL_NAME</columns>
         <columns>OPPORTUNITY.STAGE_NAME</columns>
         <columns>S12N_Course_ID__c</columns>
@@ -4679,740 +5006,6 @@ if(year( CloseDate )=year( TODAY() ),&quot;Remainder of This Year&quot;,&quot;Ot
     </listViews>
     <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
     <recordTypeTrackHistory>true</recordTypeTrackHistory>
-    <recordTypes>
-        <fullName>B2B_New_Business_Opportunity</fullName>
-        <active>false</active>
-        <businessProcess>B2B</businessProcess>
-        <description>New business opportunity type for B2B group</description>
-        <label>B2B New Business Opportunity</label>
-        <picklistValues>
-            <picklist>Account_Model__c</picklist>
-            <values>
-                <fullName>Centralized Global</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Centralized Local</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Decentralized Global</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Decentralized Local</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Approval_Process__c</picklist>
-            <values>
-                <fullName>Cert</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>RFP</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Approval_Stage__c</picklist>
-            <values>
-                <fullName>Closed - Lost</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Closed - Won</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>In Conversation with Partner</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>In Review</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>B2B_Account_Vertical__c</picklist>
-            <values>
-                <fullName>Corporate</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Government</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Nonprofit</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Capstone_Model__c</picklist>
-            <values>
-                <fullName>Locked Capstone</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>No Standalone Project-Based Course</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Unlocked Cumulative Project</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Content_Created_By__c</picklist>
-            <values>
-                <fullName>IP%26University-Created</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>IP-Created</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Content_Domain__c</picklist>
-            <values>
-                <fullName>Business</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Creative%2FArts %26 Humanities</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Data%2FData Science</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Language Learning</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Life Sciences</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Math %26 Logic</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Personal Development%2FHealth</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Physical Science %26 Engineering</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Social Sciences</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Tech%2FComputer Science</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Content_Strategy_Reviewed__c</picklist>
-            <values>
-                <fullName>Allowed</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Approved</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Rejected</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Content_Type_PCKLST__c</picklist>
-            <values>
-                <fullName>Certificate</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Course</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Degree</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Specialization</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Course_Language__c</picklist>
-            <values>
-                <fullName>English</fullName>
-                <default>true</default>
-            </values>
-            <values>
-                <fullName>French</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Hindi</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Mandarin</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Portuguese</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Russian</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Spanish</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Course_Type_Subcategory__c</picklist>
-            <values>
-                <fullName>Closed</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>High-Demand</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Project-Based Learning</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Standard</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Star Instructor</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Expected_Launch_Quarter__c</picklist>
-            <values>
-                <fullName>Q1</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Q2</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Q3</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Q4</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Expected_Launch_Year__c</picklist>
-            <values>
-                <fullName>2016</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>2017</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>2018</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>2019</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>2020</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>ForecastCategoryName</picklist>
-            <values>
-                <fullName>Best Case</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Closed</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Commit</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Omitted</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Pipeline</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Future_Potential_Spend__c</picklist>
-            <values>
-                <fullName>Expand Opportunities</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Identify Land</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Is_there_SLA_Language__c</picklist>
-            <values>
-                <fullName>No</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Yes</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Language__c</picklist>
-            <values>
-                <fullName>Albanian</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Arabic</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Catalan</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Chinese %28Simplified%29</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Chinese %28Traditional%29</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Dutch</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>English</fullName>
-                <default>true</default>
-            </values>
-            <values>
-                <fullName>French</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>German</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Hebrew</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Italian</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Portuguese %28Brazilian%29</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Portuguese %28European%29</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Russian</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Spanish</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Swedish</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Turkish</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Ukrainian</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Launch_Cycle__c</picklist>
-            <values>
-                <fullName>Fall 2017</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>September Challenge</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Spring 2017</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>LeadSource</picklist>
-            <values>
-                <fullName>Customer Event</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Google AdWords</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Inbound%3A Website</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Outbound%3A Referral%2FNetwork</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Partner</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Trade Show</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Webinar</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Lead_Source__c</picklist>
-            <values>
-                <fullName>Inbound%3A Channel vendor</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Inbound%3A Coursera network</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Inbound%3A Website</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Outbound%3A Identified organic usage</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Outbound%3A Proactive outreach</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Lead_Type__c</picklist>
-            <values>
-                <fullName>Inbound</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Wishlist</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Loss_Reason__c</picklist>
-            <values>
-                <fullName>Lost to Competitor</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>No Budget %2F Lost Funding</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>No Decision %2F Non-Responsive</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Price</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Main_Course_Type__c</picklist>
-            <values>
-                <fullName>Course</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Degree</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>S12n</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Pricing_Model__c</picklist>
-            <values>
-                <fullName>Course Redemption %28DEPRECATED%29</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Learner pre-pay</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Licenses %28DEPRECATED%29</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Standard B2B</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Production_Owner__c</picklist>
-            <values>
-                <fullName>Elizabeth Madariaga</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Justin Barker</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Peter Barna</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>RFP_Decision__c</picklist>
-            <values>
-                <fullName>Allowed</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Approved</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Denied</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Referencabiliy__c</picklist>
-            <values>
-                <fullName>Logo</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Press</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>White Paper</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Region__c</picklist>
-            <values>
-                <fullName>Europe</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>LATAM</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>US</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Sales_Channel__c</picklist>
-            <values>
-                <fullName>Direct</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Indirect</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Status_deprecated__c</picklist>
-            <values>
-                <fullName>0%25%3A Rejected %2F dropped</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>10%25%3A Topic pitched%2FQualified Opportunity</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>100%25%3A Launched</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>100%25%3A Proposal accepted</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>25%25%3A PoC%2FInstructor interested</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>5%25%3A Target Identified</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>50%25%3A Verbal commit to submit proposal</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>75%25%3A Pre-Proposal Submitted %28Round 1%29</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>90%25%3A Pre-Proposal approved</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>99%25%3A Full Proposal Submitted %28Round 2%29</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>T_L_Associate__c</picklist>
-            <values>
-                <fullName>Alexandra Urban</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Kara Behnke</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Laura Hannemann</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Lauren Swersky</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Linlin Xia</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Mariia Berezina</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Talia Greenblatt-Kolodny</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Targeted_sourcing_batch_number__c</picklist>
-            <values>
-                <fullName>Batch 1</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Batch 2</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Batch 3</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Batch 4</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Batch 5</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Type</picklist>
-            <values>
-                <fullName>New Business</fullName>
-                <default>true</default>
-            </values>
-            <values>
-                <fullName>Renewal</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Upsell</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-    </recordTypes>
     <recordTypes>
         <fullName>Degree_Sourcing_Opportunity</fullName>
         <active>true</active>
@@ -5960,7 +5553,7 @@ if(year( CloseDate )=year( TODAY() ),&quot;Remainder of This Year&quot;,&quot;Ot
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>Production_Owner__c</picklist>
+            <picklist>Production_Owner_Old__c</picklist>
             <values>
                 <fullName>Brandon Iljas</fullName>
                 <default>false</default>
@@ -6182,123 +5775,18 @@ if(year( CloseDate )=year( TODAY() ),&quot;Remainder of This Year&quot;,&quot;Ot
                 <default>false</default>
             </values>
         </picklistValues>
-    </recordTypes>
-    <recordTypes>
-        <fullName>Degree_User_Opportunity</fullName>
-        <active>true</active>
-        <businessProcess>Degree Users</businessProcess>
-        <description>Record type to capture the lifecycle for Degree user</description>
-        <label>Degree User Opportunity</label>
         <picklistValues>
-            <picklist>Account_Model__c</picklist>
+            <picklist>Vertical</picklist>
             <values>
-                <fullName>Centralized Global</fullName>
+                <fullName>Arts and Humanities</fullName>
                 <default>false</default>
             </values>
-            <values>
-                <fullName>Centralized Local</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Decentralized Global</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Decentralized Local</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Approval_Process__c</picklist>
-            <values>
-                <fullName>Cert</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>RFP</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Approval_Stage__c</picklist>
-            <values>
-                <fullName>Closed - Lost</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Closed - Won</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Curriculum reviewed by CSM</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Curriculum reviewed by T%26L</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>In Conversation with Partner</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>In Review</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>B2B_Account_Vertical__c</picklist>
-            <values>
-                <fullName>Corporate</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Government</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Nonprofit</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Capstone_Model__c</picklist>
-            <values>
-                <fullName>Locked Capstone</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>No Standalone Project-Based Course</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Unlocked Cumulative Project</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Content_Created_By__c</picklist>
-            <values>
-                <fullName>IP%26University-Created</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>IP-Created</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Content_Domain__c</picklist>
             <values>
                 <fullName>Business</fullName>
                 <default>false</default>
             </values>
             <values>
-                <fullName>Creative%2FArts %26 Humanities</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Data%2FData Science</fullName>
+                <fullName>Data</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -6310,15 +5798,19 @@ if(year( CloseDate )=year( TODAY() ),&quot;Remainder of This Year&quot;,&quot;Ot
                 <default>false</default>
             </values>
             <values>
-                <fullName>Math %26 Logic</fullName>
+                <fullName>Math and Logic</fullName>
                 <default>false</default>
             </values>
             <values>
-                <fullName>Personal Development%2FHealth</fullName>
+                <fullName>Other</fullName>
                 <default>false</default>
             </values>
             <values>
-                <fullName>Physical Science %26 Engineering</fullName>
+                <fullName>PPD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Physical Science and Engineering</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -6326,629 +5818,7 @@ if(year( CloseDate )=year( TODAY() ),&quot;Remainder of This Year&quot;,&quot;Ot
                 <default>false</default>
             </values>
             <values>
-                <fullName>Tech%2FComputer Science</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Content_Strategy_Reviewed__c</picklist>
-            <values>
-                <fullName>Allowed</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Approved</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Rejected</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Content_Type_PCKLST__c</picklist>
-            <values>
-                <fullName>Certificate</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Course</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Degree</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Specialization</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Course_Language__c</picklist>
-            <values>
-                <fullName>English</fullName>
-                <default>true</default>
-            </values>
-            <values>
-                <fullName>French</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Hindi</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Mandarin</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Portuguese</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Russian</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Spanish</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Course_Type_Subcategory__c</picklist>
-            <values>
-                <fullName>Closed</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>High-Demand</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Project-Based Learning</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Standard</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Star Instructor</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Expected_Launch_Quarter__c</picklist>
-            <values>
-                <fullName>Q1</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Q2</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Q3</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Q4</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Expected_Launch_Year__c</picklist>
-            <values>
-                <fullName>2016</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>2017</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>2018</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>2019</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>2020</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>ForecastCategoryName</picklist>
-            <values>
-                <fullName>Best Case</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Closed</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Commit</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Omitted</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Pipeline</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Future_Potential_Spend__c</picklist>
-            <values>
-                <fullName>Expand Opportunities</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Identify Land</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Is_there_SLA_Language__c</picklist>
-            <values>
-                <fullName>No</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Yes</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Language__c</picklist>
-            <values>
-                <fullName>Albanian</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Arabic</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Catalan</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Chinese %28Simplified%29</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Chinese %28Traditional%29</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Dutch</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>English</fullName>
-                <default>true</default>
-            </values>
-            <values>
-                <fullName>French</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>German</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Hebrew</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Italian</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Portuguese %28Brazilian%29</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Portuguese %28European%29</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Russian</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Spanish</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Swedish</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Turkish</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Ukrainian</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Launch_Cycle__c</picklist>
-            <values>
-                <fullName>Fall 2017</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>February 2016</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>May 2017 - Social Impact</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Off-Cycle</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>September Challenge</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Spring 2017</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Winter 2017</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>LeadSource</picklist>
-            <values>
-                <fullName>Customer Event</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Google AdWords</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Partner</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Trade Show</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Webinar</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Lead_Source__c</picklist>
-            <values>
-                <fullName>Outbound%3A Proactive outreach</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Lead_Type__c</picklist>
-            <values>
-                <fullName>Inbound</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Wishlist</fullName>
-                <default>true</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Loss_Reason__c</picklist>
-            <values>
-                <fullName>Lost to Competitor</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>No Budget %2F Lost Funding</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>No Decision %2F Non-Responsive</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Price</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Main_Course_Type__c</picklist>
-            <values>
-                <fullName>Certificate</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Course</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Degree</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Exec Ed</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>S12n</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Pricing_Model__c</picklist>
-            <values>
-                <fullName>Learner pre-pay</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Standard B2B</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Production_Owner__c</picklist>
-            <values>
-                <fullName>Brandon Iljas</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Elizabeth Madariaga</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Fannie Watkinkson</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Isha Bhardwaj</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Justin Barker</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Meera Ramakrishnan</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Partnership Manager</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Peter Barna</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Xiaofei Zhang</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>RFP_Decision__c</picklist>
-            <values>
-                <fullName>Allowed</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Approved</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Denied</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Referencabiliy__c</picklist>
-            <values>
-                <fullName>Logo</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Press</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>White Paper</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Region__c</picklist>
-            <values>
-                <fullName>Europe</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>LATAM</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>US</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Sales_Channel__c</picklist>
-            <values>
-                <fullName>Direct</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Indirect</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Status_deprecated__c</picklist>
-            <values>
-                <fullName>0%25%3A Rejected %2F dropped</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>10%25%3A Topic pitched%2FQualified Opportunity</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>100%25%3A Launched</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>100%25%3A Proposal accepted</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>25%25%3A PoC%2FInstructor interested</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>5%25%3A Target Identified</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>50%25%3A Verbal commit to submit proposal</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>75%25%3A Pre-Proposal Submitted %28Round 1%29</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>90%25%3A Pre-Proposal approved</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>99%25%3A Full Proposal Submitted %28Round 2%29</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>T_L_Associate__c</picklist>
-            <values>
-                <fullName>Alexandra Urban</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Kara Behnke</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Laura Hannemann</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Lauren Swersky</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Linlin Xia</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Mariia Berezina</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Talia Greenblatt-Kolodny</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Targeted_sourcing_batch_number__c</picklist>
-            <values>
-                <fullName>Batch 1</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Batch 2</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Batch 3</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Batch 4</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Batch 5</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Type</picklist>
-            <values>
-                <fullName>Migrate%2FRelaunch</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>New Business</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>New Content</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Renewal</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Targeted Improvement</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Upsell</fullName>
+                <fullName>Tech</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -7516,7 +6386,7 @@ if(year( CloseDate )=year( TODAY() ),&quot;Remainder of This Year&quot;,&quot;Ot
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>Production_Owner__c</picklist>
+            <picklist>Production_Owner_Old__c</picklist>
             <values>
                 <fullName>Brandon Iljas</fullName>
                 <default>false</default>
@@ -7738,115 +6608,18 @@ if(year( CloseDate )=year( TODAY() ),&quot;Remainder of This Year&quot;,&quot;Ot
                 <default>false</default>
             </values>
         </picklistValues>
-    </recordTypes>
-    <recordTypes>
-        <fullName>Learner</fullName>
-        <active>true</active>
-        <businessProcess>Learner</businessProcess>
-        <description>Premium learner single payer</description>
-        <label>Learner</label>
         <picklistValues>
-            <picklist>Account_Model__c</picklist>
+            <picklist>Vertical</picklist>
             <values>
-                <fullName>Centralized Global</fullName>
+                <fullName>Arts and Humanities</fullName>
                 <default>false</default>
             </values>
-            <values>
-                <fullName>Centralized Local</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Decentralized Global</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Decentralized Local</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Approval_Process__c</picklist>
-            <values>
-                <fullName>Cert</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>RFP</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Approval_Stage__c</picklist>
-            <values>
-                <fullName>Closed - Lost</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Closed - Won</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>In Conversation with Partner</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>In Review</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>B2B_Account_Vertical__c</picklist>
-            <values>
-                <fullName>Corporate</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Government</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Nonprofit</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Capstone_Model__c</picklist>
-            <values>
-                <fullName>Locked Capstone</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>No Standalone Project-Based Course</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Unlocked Cumulative Project</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Content_Created_By__c</picklist>
-            <values>
-                <fullName>IP%26University-Created</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>IP-Created</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Content_Domain__c</picklist>
             <values>
                 <fullName>Business</fullName>
                 <default>false</default>
             </values>
             <values>
-                <fullName>Creative%2FArts %26 Humanities</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Data%2FData Science</fullName>
+                <fullName>Data</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -7858,15 +6631,19 @@ if(year( CloseDate )=year( TODAY() ),&quot;Remainder of This Year&quot;,&quot;Ot
                 <default>false</default>
             </values>
             <values>
-                <fullName>Math %26 Logic</fullName>
+                <fullName>Math and Logic</fullName>
                 <default>false</default>
             </values>
             <values>
-                <fullName>Personal Development%2FHealth</fullName>
+                <fullName>Other</fullName>
                 <default>false</default>
             </values>
             <values>
-                <fullName>Physical Science %26 Engineering</fullName>
+                <fullName>PPD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Physical Science and Engineering</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -7874,645 +6651,7 @@ if(year( CloseDate )=year( TODAY() ),&quot;Remainder of This Year&quot;,&quot;Ot
                 <default>false</default>
             </values>
             <values>
-                <fullName>Tech%2FComputer Science</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Content_Strategy_Reviewed__c</picklist>
-            <values>
-                <fullName>Allowed</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Approved</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Rejected</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Content_Type_PCKLST__c</picklist>
-            <values>
-                <fullName>Certificate</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Course</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Degree</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Specialization</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Course_Language__c</picklist>
-            <values>
-                <fullName>English</fullName>
-                <default>true</default>
-            </values>
-            <values>
-                <fullName>French</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Hindi</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Mandarin</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Portuguese</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Russian</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Spanish</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Course_Type_Subcategory__c</picklist>
-            <values>
-                <fullName>Closed</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>High-Demand</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Project-Based Learning</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Standard</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Star Instructor</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Expected_Launch_Quarter__c</picklist>
-            <values>
-                <fullName>Q1</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Q2</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Q3</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Q4</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Expected_Launch_Year__c</picklist>
-            <values>
-                <fullName>2016</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>2017</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>2018</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>2019</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>2020</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>ForecastCategoryName</picklist>
-            <values>
-                <fullName>Best Case</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Closed</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Commit</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Omitted</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Pipeline</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Future_Potential_Spend__c</picklist>
-            <values>
-                <fullName>Expand Opportunities</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Identify Land</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Is_there_SLA_Language__c</picklist>
-            <values>
-                <fullName>No</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Yes</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Language__c</picklist>
-            <values>
-                <fullName>Albanian</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Arabic</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Catalan</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Chinese %28Simplified%29</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Chinese %28Traditional%29</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Dutch</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>English</fullName>
-                <default>true</default>
-            </values>
-            <values>
-                <fullName>French</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>German</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Hebrew</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Italian</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Portuguese %28Brazilian%29</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Portuguese %28European%29</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Russian</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Spanish</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Swedish</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Turkish</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Ukrainian</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Launch_Cycle__c</picklist>
-            <values>
-                <fullName>Fall 2017</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>September Challenge</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Spring 2017</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>LeadSource</picklist>
-            <values>
-                <fullName>Customer Event</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Google AdWords</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Inbound%3A Website</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Outbound%3A Referral%2FNetwork</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Partner</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Trade Show</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Webinar</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Lead_Source__c</picklist>
-            <values>
-                <fullName>Inbound%3A Channel vendor</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Inbound%3A Coursera network</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Inbound%3A Website</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Outbound%3A Identified organic usage</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Outbound%3A Proactive outreach</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Lead_Type__c</picklist>
-            <values>
-                <fullName>Inbound</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Wishlist</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Loss_Reason__c</picklist>
-            <values>
-                <fullName>Lost to Competitor</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>No Budget %2F Lost Funding</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>No Decision %2F Non-Responsive</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Price</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Main_Course_Type__c</picklist>
-            <values>
-                <fullName>Certificate</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Course</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Degree</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Exec Ed</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>S12n</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Pricing_Model__c</picklist>
-            <values>
-                <fullName>Course Redemption %28DEPRECATED%29</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Learner pre-pay</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Licenses %28DEPRECATED%29</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Standard B2B</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Production_Owner__c</picklist>
-            <values>
-                <fullName>Brandon Iljas</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Elizabeth Madariaga</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Fannie Watkinkson</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Isha Bhardwaj</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Justin Barker</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Meera Ramakrishnan</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Partnership Manager</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Peter Barna</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Xiaofei Zhang</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>RFP_Decision__c</picklist>
-            <values>
-                <fullName>Allowed</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Approved</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Denied</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Referencabiliy__c</picklist>
-            <values>
-                <fullName>Logo</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Press</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>White Paper</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Region__c</picklist>
-            <values>
-                <fullName>Europe</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>LATAM</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>US</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Sales_Channel__c</picklist>
-            <values>
-                <fullName>Direct</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Indirect</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Status_deprecated__c</picklist>
-            <values>
-                <fullName>0%25%3A Rejected %2F dropped</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>10%25%3A Topic pitched%2FQualified Opportunity</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>100%25%3A Launched</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>100%25%3A Proposal accepted</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>25%25%3A PoC%2FInstructor interested</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>5%25%3A Target Identified</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>50%25%3A Verbal commit to submit proposal</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>75%25%3A Pre-Proposal Submitted %28Round 1%29</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>90%25%3A Pre-Proposal approved</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>99%25%3A Full Proposal Submitted %28Round 2%29</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>T_L_Associate__c</picklist>
-            <values>
-                <fullName>Alexandra Urban</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Kara Behnke</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Laura Hannemann</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Lauren Swersky</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Linlin Xia</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Mariia Berezina</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Talia Greenblatt-Kolodny</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Targeted_sourcing_batch_number__c</picklist>
-            <values>
-                <fullName>Batch 1</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Batch 2</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Batch 3</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Batch 4</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Batch 5</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Type</picklist>
-            <values>
-                <fullName>Migrate%2FRelaunch</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>New Business</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>New Content</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Renewal</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Targeted Improvement</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Upsell</fullName>
+                <fullName>Tech</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -8521,6 +6660,7 @@ if(year( CloseDate )=year( TODAY() ),&quot;Remainder of This Year&quot;,&quot;Ot
         <fullName>New_Industry_Partner_Opportunity</fullName>
         <active>true</active>
         <businessProcess>Industry Core</businessProcess>
+        <compactLayoutAssignment>New_Industry_Partner_Compact_Layout</compactLayoutAssignment>
         <description>Opportunity to track progress of new industry partner account</description>
         <label>New Industry Partner Opportunity</label>
         <picklistValues>
@@ -8980,7 +7120,7 @@ if(year( CloseDate )=year( TODAY() ),&quot;Remainder of This Year&quot;,&quot;Ot
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>Production_Owner__c</picklist>
+            <picklist>Production_Owner_Old__c</picklist>
             <values>
                 <fullName>Partnership Manager</fullName>
                 <default>false</default>
@@ -9162,11 +7302,59 @@ if(year( CloseDate )=year( TODAY() ),&quot;Remainder of This Year&quot;,&quot;Ot
                 <default>false</default>
             </values>
         </picklistValues>
+        <picklistValues>
+            <picklist>Vertical</picklist>
+            <values>
+                <fullName>Arts and Humanities</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Data</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Language Learning</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Life Sciences</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Math and Logic</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PPD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Physical Science and Engineering</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Social Sciences</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tech</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
     </recordTypes>
     <recordTypes>
         <fullName>Partnerships_Opportunity</fullName>
         <active>true</active>
         <businessProcess>University Core</businessProcess>
+        <compactLayoutAssignment>University_Partner_Compact_Layout</compactLayoutAssignment>
         <description>This is the Opportunity to track University-made Courses and Specializations</description>
         <label>University Core Opportunity</label>
         <picklistValues>
@@ -9710,7 +7898,7 @@ if(year( CloseDate )=year( TODAY() ),&quot;Remainder of This Year&quot;,&quot;Ot
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>Production_Owner__c</picklist>
+            <picklist>Production_Owner_Old__c</picklist>
             <values>
                 <fullName>Brandon Iljas</fullName>
                 <default>false</default>
@@ -9932,6 +8120,53 @@ if(year( CloseDate )=year( TODAY() ),&quot;Remainder of This Year&quot;,&quot;Ot
                 <default>false</default>
             </values>
         </picklistValues>
+        <picklistValues>
+            <picklist>Vertical</picklist>
+            <values>
+                <fullName>Arts and Humanities</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Data</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Language Learning</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Life Sciences</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Math and Logic</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PPD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Physical Science and Engineering</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Social Sciences</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tech</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
     </recordTypes>
     <searchLayouts>
         <customTabListAdditionalFields>OPPORTUNITY.NAME</customTabListAdditionalFields>
@@ -9957,7 +8192,7 @@ if(year( CloseDate )=year( TODAY() ),&quot;Remainder of This Year&quot;,&quot;Ot
     <sharingModel>Private</sharingModel>
     <validationRules>
         <fullName>Approval_Required_Reason_for_Loss</fullName>
-        <active>true</active>
+        <active>false</active>
         <errorConditionFormula>ISPICKVAL( Approval_Stage__c , &quot;Closed - Lost&quot;) &amp;&amp;
  OR( No_response_dormant__c = FALSE,
      Rejected_internally__c = FALSE,
@@ -9968,7 +8203,7 @@ if(year( CloseDate )=year( TODAY() ),&quot;Remainder of This Year&quot;,&quot;Ot
     </validationRules>
     <validationRules>
         <fullName>B2B_Progressing_to_Verbal_Commit_Stage</fullName>
-        <active>true</active>
+        <active>false</active>
         <description>Deal terms and pricing must be approved before moving to or beyond verbal commit</description>
         <errorConditionFormula>and(  RecordType.Id =&quot;01236000000Lh7f&quot;,
 or( ISPICKVAL( StageName , &quot;Verbal Commit&quot;) ,
@@ -9981,7 +8216,7 @@ Probability =100),
     </validationRules>
     <validationRules>
         <fullName>B2B_Required_Loss_Reasons</fullName>
-        <active>true</active>
+        <active>false</active>
         <description>At least one reason must be selected if moving stage to &quot;Lost&quot;</description>
         <errorConditionFormula>and(RecordType.Id=&quot;01236000000Lh7f&quot;,
 and(ISPICKVAL(StageName,&quot;Lost/Dormant&quot;),
@@ -9995,7 +8230,7 @@ No_response_dormant__c=FALSE)))</errorConditionFormula>
     </validationRules>
     <validationRules>
         <fullName>Capstone_Transition_Plan_Required</fullName>
-        <active>true</active>
+        <active>false</active>
         <description>If Specialization currently uses the old Capstone model (aka Locked Capstone), TAM must provide details around how we&apos;ll transition to the new model</description>
         <errorConditionFormula>ISPICKVAL( Capstone_Model__c , &quot;Locked Capstone&quot;)  &amp;&amp;  ISBLANK( Capstone_Transition_Plan__c )</errorConditionFormula>
         <errorDisplayField>Capstone_Transition_Plan__c</errorDisplayField>
@@ -10003,17 +8238,44 @@ No_response_dormant__c=FALSE)))</errorConditionFormula>
     </validationRules>
     <validationRules>
         <fullName>Cert_Final_Approval</fullName>
-        <active>true</active>
-        <errorConditionFormula>ISPICKVAL( Approval_Stage__c , &quot;Closed - Won&quot;) &amp;&amp;  Content_Type__c = &quot;Certificate&quot; &amp;&amp; Signoff_from_Nikhil__c = FALSE</errorConditionFormula>
+        <active>false</active>
+        <errorConditionFormula>ISPICKVAL(  StageName  , &quot;Closed / Won&quot;) &amp;&amp;  Content_Type__c = &quot;Certificate&quot; &amp;&amp; Signoff_from_Nikhil__c = FALSE</errorConditionFormula>
         <errorMessage>This Certificate Approval does not yet have final signoff from Nikhil as the approver. Please resolve this before final approval, and moving this Certificate into Production.</errorMessage>
     </validationRules>
     <validationRules>
         <fullName>Cert_Submission_EoI</fullName>
-        <active>true</active>
+        <active>false</active>
         <errorConditionFormula>Content_Type__c == &quot;Certificate&quot;  &amp;&amp; 
  ISPICKVAL( StageName , &quot;Commitment&quot;) &amp;&amp;
   ISBLANK( Cert_EoI__c )</errorConditionFormula>
         <errorMessage>Please upload the EoI for this Certificate submission.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Commitment_Checklist_Rule</fullName>
+        <active>false</active>
+        <errorConditionFormula>AND 
+(RecordType.Name = &quot;University Core Opportunity&quot;, 
+ISCHANGED(StageName), 
+ISPICKVAL(PRIORVALUE(StageName), &quot;Commitment&quot;), 
+NOT(ISPICKVAL(StageName, &quot;Closed Lost&quot;)), 
+NOT(ISPICKVAL(StageName, &quot;Target Identified&quot;)), 
+NOT(ISPICKVAL(StageName, &quot;Qualification&quot;)), 
+NOT(ISPICKVAL(StageName, &quot;Interest Development&quot;)), 
+OR(NOT(DM_2_committed_for_content_creation__c), 
+NOT(DM_1_committed_for_content_creation__c)) 
+)</errorConditionFormula>
+        <errorMessage>Please make sure that Commitment checklist is completed before moving to next stage. If any of the criteria is not fulfilled, please Close Lost the opportunity.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>E_staff_approval_decision_b4_VM_approval</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+NOT(Is_approved_by_E_Staff__c),
+Is_RFP_Approved_by_VM__c  
+)</errorConditionFormula>
+        <errorMessage>Please enter if RFP is approved by E-staff. 
+If approved, mark &quot;Is RFP Approved by E-Staff&quot; true. 
+If rejected, select reason for rejection and mark opportunity as closed lost.</errorMessage>
     </validationRules>
     <validationRules>
         <fullName>Get_Approval_To_Change_SubmissionStage</fullName>
@@ -10041,7 +8303,7 @@ Internally_Approved_by_CBO__c = False)</errorConditionFormula>
     </validationRules>
     <validationRules>
         <fullName>Inbound_Proposal</fullName>
-        <active>true</active>
+        <active>false</active>
         <errorConditionFormula>ISPICKVAL(  Lead_Type__c  , &quot;Inbound&quot;)  &amp;&amp;  ISPICKVAL( StageName, &quot;Syllabus Submitted&quot;)  &amp;&amp;  ISBLANK(  Inbound_Proposal__c  )</errorConditionFormula>
         <errorDisplayField>Inbound_Proposal__c</errorDisplayField>
         <errorMessage>All inbound requests must have a corresponding proposal</errorMessage>
@@ -10077,6 +8339,24 @@ Internally_Approved_by_CBO__c = False)</errorConditionFormula>
 &quot;Contract Creation&quot;,4,  
 &quot;Closed / Won&quot;,5 ,0))))</errorConditionFormula>
         <errorMessage>Please select only next immediate stage available.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Interest_Development_Checklist_Rule</fullName>
+        <active>false</active>
+        <errorConditionFormula>AND 
+(RecordType.Name = &quot;University Core Opportunity&quot;, 
+ISCHANGED(StageName), 
+ISPICKVAL(PRIORVALUE(StageName), &quot;Interest Development&quot;), 
+NOT(ISPICKVAL(StageName, &quot;Closed Lost&quot;)), 
+NOT(ISPICKVAL(StageName, &quot;Target Identified&quot;)), 
+NOT(ISPICKVAL(StageName, &quot;Qualification&quot;)), 
+OR(NOT( DM_2_received_campaign_docs__c ), 
+NOT( DM_2_understood_campaign__c ), 
+NOT(DM_2_understood_opportunity__c), 
+NOT( Resources_identified_by_Instructor__c ), 
+NOT(Sent_RFP_doc_to_Partner__c)) 
+)</errorConditionFormula>
+        <errorMessage>Please make sure that Interest Development checklist is completed. If any of the required criteria is not fulfilled then please Close Lost the opportunity.</errorMessage>
     </validationRules>
     <validationRules>
         <fullName>New_IP_Required_Details_Before_Approved</fullName>
@@ -10133,12 +8413,89 @@ Interested_in_only_non_English_content__c=FALSE,
 Lack_of_production_resources__c=FALSE,
 Currently_in_production__c=FALSE)
 )</errorConditionFormula>
-        <errorDisplayField>Rejected_internally__c</errorDisplayField>
-        <errorMessage>If the target is lost, please check at least one reason for loss/dropped so we can understand where/why we&apos;re losing. If you&apos;ve checked &quot;Other,&quot; please add some notes in the &quot;Notes/details on loss&quot; box.</errorMessage>
+        <errorMessage>Please select the reason under &quot;Reasons for Loss/Rejection&quot; section and enter more details in &quot;Notes/Detail for Loss&quot; text box</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Qualification_Checklist_Rule</fullName>
+        <active>false</active>
+        <errorConditionFormula>AND 
+(RecordType.Name = &quot;University Core Opportunity&quot;, 
+ISCHANGED(StageName), 
+ISPICKVAL(PRIORVALUE(StageName), &quot;Qualification&quot;), 
+NOT(ISPICKVAL(StageName, &quot;Closed Lost&quot;)), 
+NOT(ISPICKVAL(StageName, &quot;Target Identified&quot;)) , 
+OR(NOT(Sent_collaterals_scheduled_intro_call__c), 
+NOT(Intro_call_completed__c), 
+NOT(DM_1_understood_campaign__c), 
+NOT(Faculty_members_identified__c), 
+NOT(Ready_to_contact_DM_2__c)) 
+)</errorConditionFormula>
+        <errorMessage>Please make sure that Qualification checklist is completed. If any of the criteria is not fulfilled, please Close Lost the opportunity.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>RFP_Review_and_Approval_Checklist_Rule</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND 
+(RecordType.Name = &quot;University Core Opportunity&quot;, 
+ISCHANGED(StageName), 
+ISPICKVAL(PRIORVALUE(StageName), &quot;RFP Review and Approval&quot;), 
+NOT(ISPICKVAL(StageName, &quot;Closed Lost&quot;)), 
+NOT(ISPICKVAL(StageName, &quot;Target Identified&quot;)), 
+NOT(ISPICKVAL(StageName, &quot;Qualification&quot;)), 
+NOT(ISPICKVAL(StageName, &quot;Interest Development&quot;)), 
+NOT(ISPICKVAL(StageName, &quot;Commitment&quot;)),
+NOT(ISPICKVAL(StageName, &quot;RFP Submission&quot;)), 
+OR(NOT(Is_RFP_Approved_by_VM__c), 
+NOT(Is_RFP_Approved_by_T_L__c), 
+IF(ISBLANK(Production_Owner__c), TRUE, FALSE), 
+IF(OR(ISBLANK(Amount_granted_in_advance__c), Amount_granted_in_advance__c&lt;0), TRUE, FALSE), 
+Is_approved_by_E_Staff__c) 
+)</errorConditionFormula>
+        <errorMessage>Please make sure that RFP Review and Approval checklist is completed. If any of the criteria is not fulfilled, please Close Lost the opportunity.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>RFP_Review_and_Approval_Checklist_RuleOd</fullName>
+        <active>false</active>
+        <errorConditionFormula>AND 
+(RecordType.Name = &quot;University Core Opportunity&quot;, 
+ISCHANGED(StageName), 
+ISPICKVAL(PRIORVALUE(StageName), &quot;RFP Review and Approval&quot;), 
+NOT(ISPICKVAL(StageName, &quot;Closed Lost&quot;)), 
+NOT(ISPICKVAL(StageName, &quot;Target Identified&quot;)), 
+NOT(ISPICKVAL(StageName, &quot;Qualification&quot;)), 
+NOT(ISPICKVAL(StageName, &quot;Interest Development&quot;)), 
+NOT(ISPICKVAL(StageName, &quot;Commitment&quot;)), 
+OR(NOT(Is_RFP_submitted_by_partner__c), 
+NOT(Is_RFP_Approved_by_VM__c), 
+NOT(Is_RFP_Approved_by_T_L__c), 
+IF(ISBLANK(Production_Owner__c), TRUE, FALSE), 
+IF(OR(ISBLANK(Amount_granted_in_advance__c), Amount_granted_in_advance__c&lt;0), TRUE, FALSE), 
+Is_approved_by_E_Staff__c, 
+TAM_uploaded_signed_confirmation_letter__c) 
+)</errorConditionFormula>
+        <errorMessage>Please make sure that RFP Review and Approval checklist is completed before moving to next stage. If any of the criteria is not fulfilled, please Close Lost the opportunity.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>RFP_Submission_Checklist_Rule</fullName>
+        <active>true</active>
+        <description>Please complete the RFP Submission checklist</description>
+        <errorConditionFormula>AND 
+(RecordType.Name = &quot;University Core Opportunity&quot;, 
+ISCHANGED(StageName), 
+ISPICKVAL(PRIORVALUE(StageName), &quot;RFP Submission&quot;), 
+NOT(ISPICKVAL(StageName, &quot;Closed Lost&quot;)), 
+NOT(ISPICKVAL(StageName, &quot;Target Identified&quot;)), 
+NOT(ISPICKVAL(StageName, &quot;Qualification&quot;)), 
+NOT(ISPICKVAL(StageName, &quot;Interest Development&quot;)), 
+NOT(ISPICKVAL(StageName, &quot;Commitment&quot;)), 
+OR(NOT(Is_RFP_submitted_by_partner__c),  
+IF(ISBLANK(Link_to_RFP_submitted_by_partner__c),TRUE, FALSE)) 
+)</errorConditionFormula>
+        <errorMessage>Please make sure that RFP Submission checklist is completed. If any of the required criteria is not fulfilled, please Close Lost the opportunity.</errorMessage>
     </validationRules>
     <validationRules>
         <fullName>Referenceability</fullName>
-        <active>true</active>
+        <active>false</active>
         <description>Validation rule for &apos;other&apos; value in Referenceability. Must include text in other field.</description>
         <errorConditionFormula>IF(
 AND(
@@ -10147,64 +8504,191 @@ LEN( Referenceability_Other__c) = 0), True, False)</errorConditionFormula>
         <errorMessage>Must add Referenceability (Other) information when selecting the &apos;Other&apos; value in the Referenceability picklist</errorMessage>
     </validationRules>
     <validationRules>
-        <fullName>Required_Loss_Reasons_Other</fullName>
+        <fullName>Required_Loss_Reasons_Details</fullName>
         <active>true</active>
-        <description>If a reason for &quot;Lost/dropped&quot; is not included in our main options, please jot down some notes below.</description>
-        <errorConditionFormula>and(Other__c=TRUE,ISBLANK(Notes_details_on_loss__c))</errorConditionFormula>
-        <errorDisplayField>Notes_details_on_loss__c</errorDisplayField>
-        <errorMessage>If a reason for &quot;Lost/dropped&quot; is not included in our main options, please jot down some notes here.</errorMessage>
+        <description>This rule ensures that along with every loss reason the details are entered.</description>
+        <errorConditionFormula>AND(
+OR(Rejected_internally__c,
+No_interest_from_PoC_Instructor__c,
+Cost_financial_reasons__c,
+Interested_in_only_non_English_content__c,
+Not_aligned_to_Career_Tracks__c,
+No_response_dormant__c,
+Currently_in_production__c,
+Lack_of_production_resources__c,
+Other__c,
+Rejected_by_UAB__c),
+ISBLANK(Notes_details_on_loss__c),
+LEN(Notes_details_on_loss__c)&lt;5)</errorConditionFormula>
+        <errorMessage>Please enter details in &quot;Notes/details on loss&quot; text box under Reasons for Loss/Rejection section.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Rule_to_ensure_RFP_Approval_Reason_4_T_L</fullName>
+        <active>false</active>
+        <description>This rule ensures that if RFP is approved by T&amp;L, the approval reason is entered.</description>
+        <errorConditionFormula>AND(Is_RFP_Approved_by_T_L__c, 
+ISBLANK(T_L_RFP_Approval_Reason__c) 
+)</errorConditionFormula>
+        <errorDisplayField>T_L_RFP_Approval_Reason__c</errorDisplayField>
+        <errorMessage>Please enter the reason if RFP is approved by T&amp;L.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Rule_to_ensure_RFP_Approval_Reason_4_VM</fullName>
+        <active>false</active>
+        <description>This rule ensures that if RFP is approved by VM, the approval reason is entered</description>
+        <errorConditionFormula>AND(Is_RFP_Approved_by_VM__c,
+ISBLANK(VM_RFP_Approval_Reason__c)
+)</errorConditionFormula>
+        <errorDisplayField>VM_RFP_Approval_Reason__c</errorDisplayField>
+        <errorMessage>Please enter the reason if RFP is approved by VM.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Rule_to_ensure_Vertical_field_populated</fullName>
+        <active>true</active>
+        <description>This rule will make sure that Vertical field is populated for both Industry and University Partnerships Opportunity records.</description>
+        <errorConditionFormula>ISBLANK(TEXT(Vertical__c))</errorConditionFormula>
+        <errorMessage>Please enter value in &quot;Vertical&quot; field.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>University_Partner_Stage_Transition_Rl1</fullName>
+        <active>false</active>
+        <errorConditionFormula>RecordTypeId = &quot;01236000000Lh7a&quot; &amp;&amp; 
+NOT(ISPICKVAL(StageName, &quot;Closed Lost&quot;)) &amp;&amp; 
+NOT(ISPICKVAL(PRIORVALUE(StageName), &quot;Closed Lost&quot;)) &amp;&amp; 
+( 
+(CASE(TEXT(StageName), 
+&quot;Target Identified&quot;, 1, 
+&quot;Qualification&quot;, 2, 
+&quot;Interest Development&quot;, 3, 
+&quot;Commitment&quot;, 4, 
+&quot;RFP Review and Approval&quot;, 5, 
+&quot;Closed / Won&quot;, 6, 
+0) &gt; 
+CASE(TEXT(PRIORVALUE(StageName)), 
+&quot;Target Identified&quot;, 2, 
+&quot;Qualification&quot;, 3, 
+&quot;Interest Development&quot;, 4, 
+&quot;Commitment&quot;, 5, 
+&quot;RFP Review and Approval&quot;, 6, 
+&quot;Closed / Won&quot;, 7, 
+1)) 
+|| 
+(CASE(TEXT(StageName), 
+&quot;Target Identified&quot;, 1, 
+&quot;Qualification&quot;, 2, 
+&quot;Interest Development&quot;, 3, 
+&quot;Commitment&quot;, 4, 
+&quot;RFP Review and Approval&quot;, 5, 
+&quot;Closed / Won&quot;, 6, 
+0) &lt; 
+CASE(TEXT(PRIORVALUE(StageName)), 
+&quot;Target Identified&quot;, 1, 
+&quot;Qualification&quot;, 2, 
+&quot;Interest Development&quot;, 3, 
+&quot;Commitment&quot;, 4, 
+&quot;RFP Review and Approval&quot;, 5, 
+&quot;Closed / Won&quot;, 6, 
+0)) 
+)</errorConditionFormula>
+        <errorMessage>Please select only next immediate stage available.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>University_Partner_Stage_Transition_Rule</fullName>
+        <active>true</active>
+        <errorConditionFormula>RecordTypeId = &quot;01236000000Lh7a&quot; &amp;&amp; 
+NOT(ISPICKVAL(StageName, &quot;Closed Lost&quot;)) &amp;&amp; 
+NOT(ISPICKVAL(PRIORVALUE(StageName), &quot;Closed Lost&quot;)) &amp;&amp; 
+( 
+(CASE(TEXT(StageName), 
+&quot;Target Identified&quot;, 1, 
+&quot;Qualification&quot;, 2, 
+&quot;Interest Development&quot;, 3, 
+&quot;Commitment&quot;, 4,
+&quot;RFP Submission&quot;, 5, 
+&quot;RFP Review and Approval&quot;, 6, 
+&quot;Closed / Won&quot;, 7, 
+0) &gt; 
+CASE(TEXT(PRIORVALUE(StageName)), 
+&quot;Target Identified&quot;, 2, 
+&quot;Qualification&quot;, 3, 
+&quot;Interest Development&quot;, 4, 
+&quot;Commitment&quot;, 5,
+&quot;RFP Submission&quot;, 6, 
+&quot;RFP Review and Approval&quot;, 7, 
+&quot;Closed / Won&quot;, 8, 
+1)) 
+|| 
+(CASE(TEXT(StageName), 
+&quot;Target Identified&quot;, 1, 
+&quot;Qualification&quot;, 2, 
+&quot;Interest Development&quot;, 3, 
+&quot;Commitment&quot;, 4,
+&quot;RFP Submission&quot;, 5, 
+&quot;RFP Review and Approval&quot;, 6, 
+&quot;Closed / Won&quot;, 7, 
+0) &lt; 
+CASE(TEXT(PRIORVALUE(StageName)), 
+&quot;Target Identified&quot;, 1, 
+&quot;Qualification&quot;, 2, 
+&quot;Interest Development&quot;, 3, 
+&quot;Commitment&quot;, 4,
+&quot;RFP Submission&quot;, 5, 
+&quot;RFP Review and Approval&quot;, 6, 
+&quot;Closed / Won&quot;, 7, 
+0)) 
+)</errorConditionFormula>
+        <errorMessage>Please select only next immediate stage available.</errorMessage>
     </validationRules>
     <webLinks>
-        <fullName>Create_Action_Plan</fullName>
+        <fullName>APXTConga4__Conga_Composer_OAuth</fullName>
         <availability>online</availability>
+        <description>*** DO NOT USE THIS BUTTON ON A PAGE LAYOUT *** 
+
+OAuth buttons require additional setup. Please see the Composer Installation Guide for more details.
+
+COPY THE URL FROM THIS BUTTON and paste it into your own custom button or link. Then add optional parameters to finely tune the button&apos;s behavior. See the Composer Configuration Guide for details.</description>
         <displayType>button</displayType>
         <encodingKey>UTF-8</encodingKey>
-        <height>600</height>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>660</height>
+        <isResizable>true</isResizable>
         <linkType>url</linkType>
-        <masterLabel>Create Action Plan</masterLabel>
-        <openType>sidebar</openType>
+        <masterLabel>Conga Composer (OAuth)</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
         <protected>false</protected>
-        <url>/apex/ActionPlanCreation?refType=Opportunity&amp;refId={!Opportunity.Id}</url>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>/apex/APXTConga4__Conga_Composer
+?id={!Opportunity.Id}</url>
+        <width>900</width>
     </webLinks>
     <webLinks>
-        <fullName>Create_Action_Plans</fullName>
+        <fullName>APXTConga4__Conga_Mail_Merge</fullName>
         <availability>online</availability>
-        <displayType>massActionButton</displayType>
-        <linkType>javascript</linkType>
-        <masterLabel>Create Opportunity Action Plans</masterLabel>
-        <openType>onClickJavaScript</openType>
-        <protected>false</protected>
-        <requireRowSelection>true</requireRowSelection>
-        <url>var records = {!GETRECORDIDS( $ObjectType.Opportunity )} ;
-var oName = &apos;Opportunity&apos;;
-var error = false;
-var msj = &apos;&apos;;
+        <description>*** DO NOT USE THIS BUTTON ON A PAGE LAYOUT *** 
 
-if( records.length &gt; 40 ) { 
-    error = true; 
-    msj =&apos;{!$Label.ap_Errors_moreThan20records}&apos;;
-}
-if( records.length &lt; 1 ){
-   error = true;
-   msj = &apos;{!$Label.ap_Errors_selectOneRecord}&apos;; 
-}
-
-if( error ) {
-       alert(msj);    
-}
-else{
-       location.href = &apos;/apex/ActionPlanCreation?refId=&apos;+records+&apos;&amp;refType=&apos;+oName;
-}</url>
-    </webLinks>
-    <webLinks>
-        <fullName>Manage_RFP_Process</fullName>
-        <availability>online</availability>
+COPY THE URL FROM THIS BUTTON and paste it into your own custom button or link. Then add optional parameters to finely tune the button&apos;s behavior. See the Conga Configuration Guide for details.</description>
         <displayType>button</displayType>
         <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>false</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>660</height>
+        <isResizable>false</isResizable>
         <linkType>url</linkType>
-        <masterLabel>Manage RFP Process</masterLabel>
-        <openType>replace</openType>
+        <masterLabel>Conga Composer</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
         <protected>false</protected>
-        <url>/apex/dh_superclone__superclone?rid=a0l36000000C7vN&amp;cfg=RFPProjectConfig&amp;saveURL=%5Bnewid%5D%2Fe%3FretURL%3D%2F%5Bnewid%5D</url>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://composer.congamerge.com
+?sessionId={!API.Session_ID}
+&amp;serverUrl={!API.Partner_Server_URL_290}
+&amp;id={!Opportunity.Id}</url>
+        <width>900</width>
     </webLinks>
 </CustomObject>

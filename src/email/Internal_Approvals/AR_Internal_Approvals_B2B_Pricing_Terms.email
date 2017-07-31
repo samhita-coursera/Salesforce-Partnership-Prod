@@ -1,0 +1,16 @@
+Hey there wonderful human!
+
+An opportunity is waiting for you to take action on:
+
+Account: {!Account.Name}
+Opportunity: {!Opportunity.Name}
+Owner: {!User.FirstName} {!User.LastName}
+Deal Terms: {!Opportunity.Deal_Terms__c}
+Total # Licenses: {!Opportunity.Licenses__c}
+
+
+Approve/reject it directly here: {!ApprovalRequest.Internal_URL}
+Full opp link: {!Opportunity.Link}
+
+Thank you!
+-Caffeinated Bot

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This is to send notification to ParMas to close lost the opportunities once Sourcing Review Deadline is passed</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Notifcation to ParMa to close the opportunity</name>
+    <style>none</style>
+    <subject>Notifcation to close the opportunity</subject>
+    <type>text</type>
+</EmailTemplate>

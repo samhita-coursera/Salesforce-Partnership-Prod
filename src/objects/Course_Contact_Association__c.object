@@ -82,29 +82,31 @@
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>Course_Membership_Role__c</fullName>
+        <fullName>Course_Membership_Instructor_Timestamp__c</fullName>
         <externalId>false</externalId>
-        <label>Course Membership Role</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Instructor</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Teaching Staff</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>University Admin</fullName>
-                <default>false</default>
-            </picklistValues>
-            <restrictedPicklist>true</restrictedPicklist>
-            <sorted>false</sorted>
-        </picklist>
+        <label>Course Membership Instructor Timestamp</label>
         <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
-        <type>Picklist</type>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Course_Membership_TA_Timestamp__c</fullName>
+        <externalId>false</externalId>
+        <label>Course Membership TA Timestamp</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Course_Membership_Uni_Admin_Timestamp__c</fullName>
+        <externalId>false</externalId>
+        <label>Course Membership Uni Admin Timestamp</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
     </fields>
     <fields>
         <fullName>Course_Teaching_Staff__c</fullName>
@@ -139,6 +141,18 @@
         <trackTrending>false</trackTrending>
         <type>MasterDetail</type>
         <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>External_ID__c</fullName>
+        <caseSensitive>true</caseSensitive>
+        <externalId>true</externalId>
+        <label>External ID</label>
+        <length>255</length>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
     </fields>
     <label>Course Contact Association</label>
     <listViews>

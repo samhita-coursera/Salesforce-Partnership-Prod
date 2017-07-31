@@ -100,10 +100,9 @@
         <filterScope>Everything</filterScope>
         <label>All Products</label>
     </listViews>
-    <recordTypeTrackHistory>false</recordTypeTrackHistory>
     <recordTypes>
         <fullName>B2B</fullName>
-        <active>true</active>
+        <active>false</active>
         <description>B2B Product Record Type</description>
         <label>B2B</label>
         <picklistValues>
@@ -116,7 +115,7 @@
     </recordTypes>
     <recordTypes>
         <fullName>Learner</fullName>
-        <active>true</active>
+        <active>false</active>
         <description>Premium learner single payer</description>
         <label>Learner</label>
         <picklistValues>

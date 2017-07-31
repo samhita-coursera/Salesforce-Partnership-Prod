@@ -1,0 +1,10 @@
+Dear {!Opportunity.OwnerFullName}, 
+
+The sourcing review deadline for below specified opportunity was {!Opportunity.Sourcing_Review_Deadline__c}. Thus, please mark this opportunity as Closed Lost. 
+
+Opportunity Name: {!Opportunity.Name} 
+Partner/Account Name: {!Opportunity.Account} 
+Stage: {!Opportunity.StageName} 
+Salesforce Link: {!Opportunity.Link} 
+
+Thanks!

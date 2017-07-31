@@ -1,0 +1,15 @@
+Hi Kevin, 
+
+We have received an interest from a new partner {!Lead.Company}. 
+Could you please review the below details and provide your approval? 
+
+{!Lead.Company} 
+{!Lead.Employee_Range__c} 
+{!Lead.Summary_IP__c} 
+
+Please visit the link below to approve the record or just reply as "Approved" to this email. 
+
+{!ApprovalRequest.Internal_URL} 
+
+Thanks, 
+Industry Partner Team

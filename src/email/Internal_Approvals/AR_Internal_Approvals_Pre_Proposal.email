@@ -1,0 +1,15 @@
+Hello, wonderful human!
+
+A pre-proposal for is waiting for you to take action on:
+
+Partner: {!Account.Name}
+Opportunity: {!Opportunity.Name}
+ParMa: {!User.FirstName} {!User.LastName}
+Primary Content Area: {!Opportunity.Content_Domain__c}
+
+
+Approve/reject it here: {!ApprovalRequest.Internal_URL}
+Full opp link: {!Opportunity.Link}
+
+Thank you!
+-Caffeinated Bot

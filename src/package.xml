@@ -21,17 +21,21 @@
         <name>ApprovalProcess</name>
     </types>
     <types>
+        <members>Case</members>
+        <members>Lead</members>
+        <name>AssignmentRules</name>
+    </types>
+    <types>
         <members>CustomLabels</members>
         <name>CustomLabels</name>
     </types>
     <types>
-        <members>APTTaskTemplate__c</members>
-        <members>APTaskTemplate__c</members>
+        <members>*</members>
+        <name>CustomMetadata</name>
+    </types>
+    <types>
         <members>Account</members>
         <members>AccountContactRole</members>
-        <members>ActionPlanTemplate__c</members>
-        <members>ActionPlan__c</members>
-        <members>Action_Plans_Settings__c</members>
         <members>Activity</members>
         <members>AgentWork</members>
         <members>Asset</members>
@@ -66,13 +70,6 @@
         <members>Macro</members>
         <members>MacroAction</members>
         <members>MacroInstruction</members>
-        <members>Milestone1_Expense__c</members>
-        <members>Milestone1_Log__c</members>
-        <members>Milestone1_Milestone__c</members>
-        <members>Milestone1_Project__c</members>
-        <members>Milestone1_Settings__c</members>
-        <members>Milestone1_Task__c</members>
-        <members>Milestone1_Time__c</members>
         <members>Opportunity</members>
         <members>OpportunityCompetitor</members>
         <members>OpportunityContactRole</members>
@@ -88,7 +85,6 @@
         <members>ProfileSkill</members>
         <members>ProfileSkillEndorsement</members>
         <members>ProfileSkillUser</members>
-        <members>Project_Snapshot__c</members>
         <members>Quote</members>
         <members>QuoteLineItem</members>
         <members>RequestsForAccessSIQ</members>
@@ -110,12 +106,77 @@
         <name>CustomObject</name>
     </types>
     <types>
-        <members>APTTaskTemplate__c</members>
-        <members>APTaskTemplate__c</members>
+        <members>*</members>
+        <name>CustomPermission</name>
+    </types>
+    <types>
+        <members>For_ParMas_Internal_Communication</members>
+        <members>For_ParMas_Internal_Communication/Notifcation_to_ParMa_to_close_the_opportunity</members>
+        <members>For_ParMas_Internal_Communication/Notification_if_Partner_submits_RFP</members>
+        <members>Internal_Approvals</members>
+        <members>Internal_Approvals/AR_Internal_Approvals_B2B_Pricing_Terms</members>
+        <members>Internal_Approvals/AR_Internal_Approvals_Pre_Proposal</members>
+        <members>Internal_Approvals/Industry_Partner_Manager_Approval</members>
+        <members>MarketoEmailTemplates</members>
+        <members>unfiled$public</members>
+        <members>unfiled$public/ContactFollowUpSAMPLE</members>
+        <members>unfiled$public/Follow_up_email_when_the_opportunity_is_in_commitment_stage</members>
+        <members>unfiled$public/LeadsNewassignmentnotificationSAMPLE</members>
+        <members>unfiled$public/LeadsWebtoLeademailresponseSAMPLE</members>
+        <members>unfiled$public/SUPPORTCaseResponsewithSolutionSAMPLE</members>
+        <members>unfiled$public/SUPPORTCaseescalationnotificationSAMPLE</members>
+        <members>unfiled$public/SUPPORTNewassignmentnotificationSAMPLE</members>
+        <members>unfiled$public/SUPPORTSelfServiceNewCommentNotificationSAMPLE</members>
+        <members>unfiled$public/SUPPORTSelfServiceNewCommentSAMPLE</members>
+        <members>unfiled$public/SUPPORTSelfServiceNewUserLoginInformationSAMPLE</members>
+        <members>unfiled$public/SUPPORTSelfServiceNewUserLoginSAMPLE</members>
+        <members>unfiled$public/SUPPORTSelfServiceResetPasswordSAMPLE</members>
+        <members>unfiled$public/SUPPORTSelfServiceResetPasswordSAMPLE2</members>
+        <members>unfiled$public/SUPPORTWebtoCaseemailresponseSAMPLE</members>
+        <members>unfiled$public/Sample_CallNoAnswer</members>
+        <members>unfiled$public/Sample_CustomerInterest</members>
+        <members>unfiled$public/Sample_DealClosed</members>
+        <members>unfiled$public/Sample_GreatMeetingYou</members>
+        <members>unfiled$public/Sample_HappyBirthday</members>
+        <members>unfiled$public/Sample_MeetOnsite</members>
+        <members>unfiled$public/Sample_NewAccountManager</members>
+        <members>unfiled$public/Sample_NextSteps</members>
+        <members>unfiled$public/Sample_OutofOffice</members>
+        <members>unfiled$public/Sample_Promotion</members>
+        <members>unfiled$public/Sample_Reconnecting</members>
+        <members>unfiled$public/Sample_ScheduleMeeting</members>
+        <name>EmailTemplate</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>Flow</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>GlobalPicklist</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>PermissionSet</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>Profile</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>Queue</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>RemoteSiteSetting</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>Role</name>
+    </types>
+    <types>
         <members>Account</members>
-        <members>ActionPlanTemplate__c</members>
-        <members>ActionPlan__c</members>
-        <members>Action_Plans_Settings__c</members>
         <members>Asset</members>
         <members>AssistantProgress</members>
         <members>Campaign</members>
@@ -128,18 +189,10 @@
         <members>ExchangeUserMapping</members>
         <members>Lead</members>
         <members>Macro</members>
-        <members>Milestone1_Expense__c</members>
-        <members>Milestone1_Log__c</members>
-        <members>Milestone1_Milestone__c</members>
-        <members>Milestone1_Project__c</members>
-        <members>Milestone1_Settings__c</members>
-        <members>Milestone1_Task__c</members>
-        <members>Milestone1_Time__c</members>
         <members>Opportunity</members>
         <members>Order</members>
         <members>PendingServiceRouting</members>
         <members>ProfileSkill</members>
-        <members>Project_Snapshot__c</members>
         <members>RequestsForAccessSIQ</members>
         <members>S12N_Account_Association__c</members>
         <members>SocialPost</members>
@@ -158,12 +211,7 @@
         <name>StaticResource</name>
     </types>
     <types>
-        <members>APTTaskTemplate__c</members>
-        <members>APTaskTemplate__c</members>
         <members>Account</members>
-        <members>ActionPlanTemplate__c</members>
-        <members>ActionPlan__c</members>
-        <members>Action_Plans_Settings__c</members>
         <members>Asset</members>
         <members>AssetRelationship</members>
         <members>AssistantProgress</members>
@@ -188,13 +236,6 @@
         <members>Macro</members>
         <members>MacroAction</members>
         <members>MacroInstruction</members>
-        <members>Milestone1_Expense__c</members>
-        <members>Milestone1_Log__c</members>
-        <members>Milestone1_Milestone__c</members>
-        <members>Milestone1_Project__c</members>
-        <members>Milestone1_Settings__c</members>
-        <members>Milestone1_Task__c</members>
-        <members>Milestone1_Time__c</members>
         <members>Opportunity</members>
         <members>OpportunityLineItem</members>
         <members>OpportunityTeamMember</members>
@@ -206,7 +247,6 @@
         <members>ProfileSkill</members>
         <members>ProfileSkillEndorsement</members>
         <members>ProfileSkillUser</members>
-        <members>Project_Snapshot__c</members>
         <members>Quote</members>
         <members>QuoteLineItem</members>
         <members>RequestsForAccessSIQ</members>

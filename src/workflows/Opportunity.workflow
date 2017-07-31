@@ -1,28 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
     <alerts>
-        <fullName>Opportunity_Closed_Won_Email_Alert_to_ParMas</fullName>
-        <description>Opportunity Closed Won Email Alert to ParMas</description>
+        <fullName>Follow_up_on_your_Opportunity</fullName>
+        <description>Follow up on your Opportunity</description>
         <protected>false</protected>
         <recipients>
-            <recipient>gdubois@coursera.org</recipient>
-            <type>user</type>
-        </recipients>
-        <recipients>
-            <recipient>nisha@coursera.org</recipient>
-            <type>user</type>
+            <type>owner</type>
         </recipients>
         <senderType>CurrentUser</senderType>
-        <template>unfiled$public/ParMa_Closed_Won_Opportunity_Template</template>
+        <template>unfiled$public/Follow_up_email_when_the_opportunity_is_in_commitment_stage</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Email_to_T_L_and_VM_for_submitted_RFP</fullName>
+        <ccEmails>nishav@coursera.org</ccEmails>
+        <description>Send Email to T&amp;L and VM for submitted RFP</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <field>CSM_VM_for_Content_Approval__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <recipients>
+            <field>T_L_Specialist_for_Pedagogy_Approval__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>For_ParMas_Internal_Communication/Notification_if_Partner_submits_RFP</template>
     </alerts>
     <fieldUpdates>
-        <fullName>Assign_Vertical_by_Campaign</fullName>
-        <field>Vertical_v2__c</field>
-        <formula>TEXT(Campaign.Vertical__c)</formula>
-        <name>Assign Vertical by Campaign</name>
+        <fullName>Check_the_workflow_checkbox</fullName>
+        <field>Workflow_Check__c</field>
+        <literalValue>1</literalValue>
+        <name>Check the workflow checkbox</name>
         <notifyAssignee>false</notifyAssignee>
-        <operation>Formula</operation>
+        <operation>Literal</operation>
         <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Closed_Won_University_Core_Opportunity</fullName>
+        <field>StageName</field>
+        <literalValue>Closed / Won</literalValue>
+        <name>Closed Won University Core Opportunity</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
     </fieldUpdates>
     <fieldUpdates>
         <fullName>Exclude_from_RFP_Check</fullName>
@@ -53,6 +78,16 @@
         <operation>Literal</operation>
         <protected>false</protected>
         <targetObject>AccountId</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Mark_TAM_uploaded_signed_confirmation</fullName>
+        <field>TAM_uploaded_signed_confirmation_letter__c</field>
+        <literalValue>1</literalValue>
+        <name>Mark TAM uploaded signed confirmation</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
     </fieldUpdates>
     <fieldUpdates>
         <fullName>Move_Content_Strategy_Review_to_Allow</fullName>
@@ -135,6 +170,16 @@
         <protected>false</protected>
     </fieldUpdates>
     <fieldUpdates>
+        <fullName>Uncheck_the_workflow_checkbox</fullName>
+        <field>Workflow_Check__c</field>
+        <literalValue>0</literalValue>
+        <name>Uncheck the workflow checkbox</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
         <fullName>Update_Account_Tier</fullName>
         <field>X2016_B2B_Tier__c</field>
         <literalValue>Experimental (Reactive)</literalValue>
@@ -173,6 +218,26 @@
         <notifyAssignee>false</notifyAssignee>
         <operation>Literal</operation>
         <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Is_Approved_by_VM_true</fullName>
+        <field>Is_RFP_Approved_by_VM__c</field>
+        <literalValue>1</literalValue>
+        <name>Update Is Approved by VM true</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Is_RFP_Approved_by_T_L</fullName>
+        <field>Is_RFP_Approved_by_T_L__c</field>
+        <literalValue>1</literalValue>
+        <name>Update Is RFP Approved by T_L</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
     </fieldUpdates>
     <fieldUpdates>
         <fullName>Update_Next_Step_reflect_Approval</fullName>
@@ -248,6 +313,25 @@ PRIORVALUE( Prior_Steps_Auto_tracked__c)</formula>
         <reevaluateOnChange>true</reevaluateOnChange>
     </fieldUpdates>
     <fieldUpdates>
+        <fullName>Update_Workflow_Order_back_to_0</fullName>
+        <field>Workflow_Order__c</field>
+        <formula>0</formula>
+        <name>Update Workflow Order back to 0</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Workflow_Order_to_1</fullName>
+        <field>Workflow_Order__c</field>
+        <formula>1</formula>
+        <name>Update Workflow Order to 1</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
         <fullName>Update_approved_discount_field</fullName>
         <description>Checks the discount approved field</description>
         <field>Discount_Approved__c</field>
@@ -268,17 +352,29 @@ PRIORVALUE( Prior_Steps_Auto_tracked__c)</formula>
         <protected>false</protected>
     </fieldUpdates>
     <rules>
-        <fullName>Assign Vertical to Opportunity from Campaign</fullName>
+        <fullName>Close Won Opportunity if RFP Approved</fullName>
         <actions>
-            <name>Assign_Vertical_by_Campaign</name>
+            <name>Closed_Won_University_Core_Opportunity</name>
             <type>FieldUpdate</type>
         </actions>
         <active>true</active>
         <criteriaItems>
-            <field>Opportunity.CampaignId</field>
-            <operation>notEqual</operation>
+            <field>Opportunity.Is_RFP_Approved_by_VM__c</field>
+            <operation>equals</operation>
+            <value>True</value>
         </criteriaItems>
-        <triggerType>onAllChanges</triggerType>
+        <criteriaItems>
+            <field>Opportunity.Is_RFP_Approved_by_T_L__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>RFP Review and Approval</value>
+        </criteriaItems>
+        <description>This workflow will change opportunity stage to Closed / Won if RFP is approved by both VM and T&amp;L and signed confirmation letter is uploaded.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
     <rules>
         <fullName>Closed Lost New Industry Partner</fullName>
@@ -301,24 +397,115 @@ PRIORVALUE( Prior_Steps_Auto_tracked__c)</formula>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
     <rules>
-        <fullName>Closed Won Opportunity</fullName>
+        <fullName>Email Notification to T%26L and VM on RFP Submission</fullName>
         <actions>
-            <name>Opportunity_Closed_Won_Email_Alert_to_ParMas</name>
+            <name>Send_Email_to_T_L_and_VM_for_submitted_RFP</name>
             <type>Alert</type>
         </actions>
         <active>true</active>
         <criteriaItems>
+            <field>Opportunity.Is_RFP_submitted_by_partner__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Link_to_RFP_submitted_by_partner__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Mark TAM uploaded signed Confirmation Letter if link is populated</fullName>
+        <actions>
+            <name>Mark_TAM_uploaded_signed_confirmation</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.Link_to_Signed_Confirmation_Document__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.TAM_uploaded_signed_confirmation_letter__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <description>This rule will automatically mark &quot;TAM uploaded signed Confirmation Letter&quot; checkbox true once the corresponding URL is populated</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Send Email%3A Opportunity Committed</fullName>
+        <actions>
+            <name>Check_the_workflow_checkbox</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Workflow_Order_to_1</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>University Core Opportunity</value>
+        </criteriaItems>
+        <criteriaItems>
             <field>Opportunity.StageName</field>
             <operation>equals</operation>
-            <value>Closed / Won</value>
+            <value>Commitment</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Workflow_Check__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Workflow_Order__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Send Email%3A When workflow checkbox is checked</fullName>
+        <actions>
+            <name>Update_Workflow_Order_back_to_0</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.Workflow_Check__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Commitment</value>
         </criteriaItems>
         <criteriaItems>
             <field>Opportunity.RecordTypeId</field>
             <operation>equals</operation>
             <value>University Core Opportunity</value>
         </criteriaItems>
-        <description>To send email notification to ParMas once opportunity is closed/won</description>
+        <criteriaItems>
+            <field>Opportunity.Workflow_Order__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </criteriaItems>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Follow_up_on_your_Opportunity</name>
+                <type>Alert</type>
+            </actions>
+            <actions>
+                <name>Uncheck_the_workflow_checkbox</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <timeLength>1</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
     </rules>
     <rules>
         <fullName>Set the Industry Account Active once Opportunity is Closed Won</fullName>
@@ -400,5 +587,42 @@ PRIORVALUE( Prior_Steps_Auto_tracked__c)</formula>
         </criteriaItems>
         <description>If the opportunity is created under an Account Record Type = Partnerships, then make sure the opportunity is for Partnerships</description>
         <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Updated Is Approved by T_L if reason populated</fullName>
+        <actions>
+            <name>Update_Is_RFP_Approved_by_T_L</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.T_L_RFP_Approval_Reason__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Is_RFP_Approved_by_T_L__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <description>This rule will auto check &quot;Is RFP Approved by T&amp;L&quot; once the T&amp;L RFP Approval Reason is populated</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Updated Is Approved by VM if reason populated</fullName>
+        <actions>
+            <name>Update_Is_Approved_by_VM_true</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.VM_RFP_Approval_Reason__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Is_RFP_Approved_by_VM__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
 </Workflow>

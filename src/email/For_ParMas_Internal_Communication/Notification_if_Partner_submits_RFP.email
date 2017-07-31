@@ -1,0 +1,11 @@
+Dear T&L Reviewer {!Opportunity.T_L_Specialist_FIrst_Name__c} and VM {!Opportunity.CSM_VM_First_Name__c},
+
+This is to inform you that the RFP has been submitted by the partner {!Opportunity.Account} for below specified opportunity. Please review this proposal and enter your decision with proper reasoning into salesforce using detail link below. Also update the link to draft confirmation letter if applicable.
+
+Opportunity Name: {!Opportunity.Name}
+Partner/Account Name: {!Opportunity.Account}
+Link to submitted RFP document: {!Opportunity.Link_to_RFP_submitted_by_partner__c}
+Amount granted in advance: {!Opportunity. Amount_granted_in_advance__c}
+Production Owner for this opportunity: {!Opportunity. Production_Owner__c}
+
+Detail Link to opportunity: {!Opportunity.Link}

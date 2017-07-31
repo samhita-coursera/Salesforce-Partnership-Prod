@@ -1,0 +1,7 @@
+Hello,
+
+Your Opportunity -  {!Opportunity.Name} has been in the  {!Opportunity.StageName} stage.
+
+This is a reminder email for you to followup on it.
+
+Thanks!

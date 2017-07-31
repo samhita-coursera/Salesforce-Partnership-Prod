@@ -53,16 +53,6 @@
         <required>false</required>
         <type>TextArea</type>
     </fields>
-    <fields>
-        <fullName>TaskTemplateId__c</fullName>
-        <description>Lookup link to Task Template</description>
-        <externalId>true</externalId>
-        <label>Task Template Id</label>
-        <length>255</length>
-        <required>false</required>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
     <listViews>
         <fullName>MyActivities</fullName>
         <columns>ACTIVITY_SUBTYPE</columns>
@@ -119,39 +109,6 @@
             <value>YESTERDAY</value>
         </filters>
         <label>Upcoming Events</label>
-    </listViews>
-    <listViews>
-        <fullName>ezwf__MyDelegatedActivities</fullName>
-        <columns>TASK.SUBJECT</columns>
-        <columns>TASK.WHO_NAME</columns>
-        <columns>TASK.DUE_DATE</columns>
-        <columns>TASK.CREATED_DATE</columns>
-        <columns>CORE.USERS.FULL_NAME</columns>
-        <columns>CREATEDBY_USER.ALIAS</columns>
-        <columns>TASK.PRIORITY</columns>
-        <columns>TASK.STATUS</columns>
-        <columns>TASK.TYPE</columns>
-        <filterScope>Delegated</filterScope>
-        <label>My Delegated Activities</label>
-    </listViews>
-    <listViews>
-        <fullName>ezwf__MyOpenActivities</fullName>
-        <columns>TASK.SUBJECT</columns>
-        <columns>TASK.WHO_NAME</columns>
-        <columns>TASK.DUE_DATE</columns>
-        <columns>TASK.CREATED_DATE</columns>
-        <columns>CORE.USERS.FULL_NAME</columns>
-        <columns>CREATEDBY_USER.ALIAS</columns>
-        <columns>TASK.PRIORITY</columns>
-        <columns>TASK.STATUS</columns>
-        <columns>TASK.TYPE</columns>
-        <filterScope>Mine</filterScope>
-        <filters>
-            <field>TASK.STATUS</field>
-            <operation>notEqual</operation>
-            <value>Completed</value>
-        </filters>
-        <label>My Open Activities</label>
     </listViews>
     <searchLayouts>
         <searchResultsAdditionalFields>TASK.SUBJECT</searchResultsAdditionalFields>

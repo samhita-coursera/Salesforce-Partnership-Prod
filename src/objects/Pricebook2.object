@@ -65,7 +65,7 @@
     </listViews>
     <recordTypes>
         <fullName>Learner</fullName>
-        <active>true</active>
+        <active>false</active>
         <description>Premium learner single payer</description>
         <label>Learner</label>
     </recordTypes>
